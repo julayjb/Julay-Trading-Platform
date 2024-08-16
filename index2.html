@@ -1,0 +1,762 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>JUL_AI Auto Trading Platform</title>
+<link rel="shortcut icon" href="https://www.ezpola.ezbinarybot.com/image/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="./EZ POLA by ezbinarybot.com_files/ezpola_202006281532.css">
+<style type="text/css">
+body, html {
+  height: 90%;
+  width: 99%;
+}
+body {
+	background-color: #FFF;
+	margin-top: 0px;
+}
+body,td,th {
+	color: #FFF;
+	font-weight: bold;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+</style>
+</head>
+
+<body>           
+<table width="100%" border="0">
+<tbody><tr>
+<td align="center" valign="middle">
+
+<table border="0" align="center">
+  <tbody><tr>
+    <td width="10px" align="center" valign="top" class="ezTable" bgcolor="#FF6600" style="border:1px solid #FFFFFF"><table width="100%" border="0" cellpadding="5" cellspacing="0">
+      <tbody><tr>
+        <td width="33%" align="left" valign="middle"><br>Target Profit<br><input name="txtTargetProfit" type="text" id="txtTargetProfit" value="100" style="width:100%"></td>
+        <td width="33%" align="left" valign="middle">Marti<br>Multi<br>plier<br><input name="txtMartiMultiplier" type="text" id="txtMartiMultiplier" style="width:100%" value="15"></td>
+        <td width="33%" align="left" valign="middle">Marti Max Level<br><input name="txtMartiMaxLevel" type="number" id="txtMartiMaxLevel" value="3" min="0" style="width:100%"></td>
+        </tr>
+      <tr><td colspan="3"></td></tr>
+      <tr>
+        <td width="33%" align="center" valign="middle">
+        Smart Stake<br><input style="transform:scale(1.5)" name="checkSmartStake" id="checkSmartStake" type="checkbox" onchange="if(this.checked){document.getElementById(&#39;txtInitialStake&#39;).readOnly=true;document.getElementById(&#39;txtInitialStake&#39;).style.backgroundColor=&#39;yellow&#39;;document.getElementById(&#39;txtStopLoss&#39;).readOnly=true;document.getElementById(&#39;txtStopLoss&#39;).style.backgroundColor=&#39;yellow&#39;;}else{document.getElementById(&#39;txtInitialStake&#39;).readOnly=false;document.getElementById(&#39;txtInitialStake&#39;).style.backgroundColor=&#39;&#39;;document.getElementById(&#39;txtStopLoss&#39;).readOnly=false;document.getElementById(&#39;txtStopLoss&#39;).style.backgroundColor=&#39;&#39;;}">
+        </td>
+        <td width="33%" align="left" valign="middle">Stop<br>Loss<br><input name="txtStopLoss" type="text" id="txtStopLoss" value="100" style="width: 100%;"></td>
+        <td width="33%" align="left" valign="middle">Init Stake<br><input name="txtInitialStake" type="text" id="txtInitialStake" value="1" style="width: 100%;"><input id="txtStakeHid" type="hidden" value="1"></td>
+        </tr>
+        <tr><td colspan="3"></td></tr>
+      <tr>
+        <td width="33%" align="left" valign="top">Duration<br><input style="width:100%" name="txtDur" type="number" id="txtDur" value="1" min="1">
+          <select style="width:106%" name="selDurUni" id="selDurUni">
+            <option value="t">Tick(s)</option>
+            <option value="s">Second(s)</option>
+            <option value="m">Minute(s)</option>
+            <option value="h">Hour(s)</option>
+          </select></td>
+        <td colspan="2" align="left" valign="top">Market<br><select style="width:104%" name="selMarket" id="selMarket" onchange="document.getElementById(&#39;logLD&#39;).innerHTML=&#39;&#39;;bj();">
+          <option value="1HZ10V">Volatility 10 (1s)</option>
+          <option value="R_10" selected="selected">Volatility 10</option>
+          <option value="1HZ25V">Volatility 25 (1s)</option>
+            <option value="R_25">Volatility 25</option>
+            <option value="1HZ50V">Volatility 50 (1s)</option>
+            <option value="R_50">Volatility 50</option>
+            <option value="1HZ75V">Volatility 75 (1s)</option>
+            <option value="R_75">Volatility 75</option>
+            <option value="1HZ100V">Volatility 100 (1s)</option>
+            <option value="R_100">Volatility 100</option>
+            <option value="RDBEAR">Random Bear</option>
+            <option value="RDBULL">Random Bull</option>
+            <option value="JD10">Jump 10</option>
+            <option value="JD25">Jump 25</option>
+            <option value="JD50">Jump 50</option>
+            <option value="JD75">Jump 75</option>
+            <option value="JD100">Jump 100</option>
+          </select></td>
+        </tr>
+      <tr><td colspan="3"></td></tr>
+      <tr>
+        <td width="33%" align="left" valign="top">
+        Main<br>Token<br><input style="width:100%" name="txtMainToken" type="password" id="txtMainToken"><input style="width:107%" type="button" name="btnConMain" id="btnConMain" value="Connect" onclick="if(checkDupli()){alert(&#39;Main Token must be different with Virtual Token&#39;);}else{bk();}"><label id="lblAcc"></label></td>
+        <td width="33%" align="left" valign="top">Virtual Token<br><input style="width:100%" name="txtVirtualToken" type="password" id="txtVirtualToken"><input style="width:107%" type="button" name="btnConVirtual" id="btnConVirtual" value="Connect" onclick="if(checkDupli()){alert(&#39;Main Token must be different with Virtual Token&#39;);}else{bk8();}"><label id="lblAccVirtual"></label></td>
+        <td width="33%" align="left" valign="top">Virtual Lose<br><input name="txtVirtualLose" type="number" id="txtVirtualLose" value="0" min="0" style="width:100%"></td>
+        </tr>
+        <tr height="1px">
+        <td colspan="3" align="center" valign="middle">
+    After Lose (Main) ?
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td><label>
+          <input type="radio" name="radAfterLose" value="wait" id="radAfterLoseWait">
+          Back to virtual signal.</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="radAfterLose" value="keep" id="radAfterLoseKeep" checked="checked">
+          Keep purchase until win.</label></td>
+      </tr>
+    </tbody></table>
+        </td>
+        </tr>
+      <tr>
+      </tr><tr><td colspan="3"></td></tr>
+        <tr height="1px">
+        <td colspan="3" align="center" valign="middle"><input style="transform:scale(1.5)" name="checkDelLose" id="checkDelLose" type="checkbox" onchange="if(this.checked){document.getElementById(&#39;trDelLose&#39;).style.display=&#39;table-row&#39;;}else{document.getElementById(&#39;trDelLose&#39;).style.display=&#39;none&#39;;}"> 
+        Delay After Lose</td>
+        </tr>
+      <tr id="trDelLose" style="display:none">
+        <td width="33%" align="left" valign="top">Apply to<br>
+          <select style="width:120%" name="selDelLoseApply" id="selDelLoseApply">
+            <option value="1">1.Main Only</option>
+            <option value="2">2.Main &amp; Virtual</option>
+            <option value="3">3.Virtual Only</option>
+          </select></td>
+        <td colspan="2" align="center" valign="top">Random (sec)<br>
+          <input style="width:30%" name="txtDelLoseFrom" type="number" min="0" value="5" id="txtDelLoseFrom"> to <input style="width:30%" name="txtDelLoseTo" type="number" min="0" value="10" id="txtDelLoseTo"></td>
+        </tr>
+      <tr><td colspan="3"></td></tr>
+      <tr height="1px">
+        <td colspan="3" align="center" valign="middle"><input style="transform:scale(1.5)" name="checkDelWin" id="checkDelWin" type="checkbox" onchange="if(this.checked){document.getElementById(&#39;trDelWin&#39;).style.display=&#39;table-row&#39;;}else{document.getElementById(&#39;trDelWin&#39;).style.display=&#39;none&#39;;}"> Delay After Win</td>
+        </tr>
+      <tr id="trDelWin" style="display:none">
+        <td width="33%" align="left" valign="top">Apply to<br>
+          <select style="width:120%" name="selDelWinApply" id="selDelWinApply">
+            <option value="1">1.Main Only</option>
+            <option value="2">2.Main &amp; Virtual</option>
+            <option value="3">3.Virtual Only</option>
+          </select></td>
+        <td colspan="2" align="center" valign="top">Random (sec)<br>
+          <input style="width:30%" name="txtDelWinFrom" type="number" min="0" value="5" id="txtDelWinFrom"> to <input style="width:30%" name="txtDelWinTo" type="number" min="0" value="10" id="txtDelWinTo"></td>
+        </tr>
+    </tbody></table></td>
+    <td align="center" valign="top"></td>
+    <td align="center" valign="top" class="ezTable" bgcolor="#660099" style="border:1px solid #FFFFFF"><table width="100%" border="0" cellpadding="5" cellspacing="0">
+      <tbody><tr>
+        <td colspan="4" align="center"><table width="100%" border="0" cellpadding="0">
+          <tbody><tr>
+            <td colspan="3" align="center"><font size="+2">EZ POLA</font></td>
+            </tr>
+          <tr>
+            <td align="center"><input style="width:75px" type="button" name="btnLoadFormula" id="btnLoadFormula" value="Load" onclick="document.getElementById(&#39;btnLoadPre&#39;).click();">
+            <input hidden="hidden" type="file" name="btnLoadPre" id="btnLoadPre" accept=".ezp" onchange="ld(event);"></td>
+            <td align="center"><input style="width:75px" type="button" name="btnSaveFormula" id="btnSaveFormula" value="Save" onclick="bo();"></td>
+            <td align="center"><input style="width:75px" type="button" name="btnDefaultFormula" id="btnDefaultFormula" value="Default" onclick="bdef();"></td>
+          </tr>
+          </tbody></table></td>
+      </tr>
+      <tr>
+        <td width="5" align="center">&nbsp;</td>
+        <td align="center">Digit Pattern</td>
+        <td align="center">&gt;&gt;</td>
+        <td align="center">Open Contract</td>
+      </tr>
+      <tr>
+        <td width="5" align="right">Ex.</td>
+        <td><input name="txtFormulaEx" type="text" disabled="disabled" id="txtFormulaEx" style="text-align:center; width:75px" value="1357" readonly="readonly"></td>
+        <td>&gt;&gt;</td>
+        <td><select disabled="disabled" name="selContractEx" id="selContractEx">
+          <option value="CALL^CALL">RISE</option>
+          <option value="PUT^PUT">FALL</option>
+          <option value="DIGITEVEN^DIGITEVEN">EVEN</option>
+          <option value="DIGITODD^DIGITODD">ODD</option>
+          <option value="DIGITDIFF^0">DIFFER 0</option>
+          <option value="DIGITDIFF^1">DIFFER 1</option>
+          <option value="DIGITDIFF^2">DIFFER 2</option>
+          <option value="DIGITDIFF^3">DIFFER 3</option>
+          <option value="DIGITDIFF^4">DIFFER 4</option>
+          <option value="DIGITDIFF^5">DIFFER 5</option>
+          <option value="DIGITDIFF^6">DIFFER 6</option>
+          <option value="DIGITDIFF^7">DIFFER 7</option>
+          <option value="DIGITDIFF^8">DIFFER 8</option>
+          <option value="DIGITDIFF^9" selected="selected">DIFFER 9</option>
+          <option value="DIGITMATCH^0">MATCH 0</option>
+          <option value="DIGITMATCH^1">MATCH 1</option>
+          <option value="DIGITMATCH^2">MATCH 2</option>
+          <option value="DIGITMATCH^3">MATCH 3</option>
+          <option value="DIGITMATCH^4">MATCH 4</option>
+          <option value="DIGITMATCH^5">MATCH 5</option>
+          <option value="DIGITMATCH^6">MATCH 6</option>
+          <option value="DIGITMATCH^7">MATCH 7</option>
+          <option value="DIGITMATCH^8">MATCH 8</option>
+          <option value="DIGITMATCH^9">MATCH 9</option>
+          <option value="DIGITOVER^0">OVER 0</option>
+          <option value="DIGITOVER^1">OVER 1</option>
+          <option value="DIGITOVER^2">OVER 2</option>
+          <option value="DIGITOVER^3">OVER 3</option>
+          <option value="DIGITOVER^4">OVER 4</option>
+          <option value="DIGITOVER^5">OVER 5</option>
+          <option value="DIGITOVER^6">OVER 6</option>
+          <option value="DIGITOVER^7">OVER 7</option>
+          <option value="DIGITOVER^8">OVER 8</option>
+          <option value="DIGITUNDER^1">UNDER 1</option>
+          <option value="DIGITUNDER^2">UNDER 2</option>
+          <option value="DIGITUNDER^3">UNDER 3</option>
+          <option value="DIGITUNDER^4">UNDER 4</option>
+          <option value="DIGITUNDER^5">UNDER 5</option>
+          <option value="DIGITUNDER^6">UNDER 6</option>
+          <option value="DIGITUNDER^7">UNDER 7</option>
+          <option value="DIGITUNDER^8">UNDER 8</option>
+          <option value="DIGITUNDER^9">UNDER 9</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td width="5" align="right">1.</td>
+        <td><input style="text-align:center; width:75px" name="txtFormula1" type="text" id="txtFormula1"></td>
+        <td>&gt;&gt;</td>
+        <td><select name="selContract1" id="selContract1">
+          <option value="CALL^CALL">RISE</option>
+          <option value="PUT^PUT">FALL</option>
+          <option value="DIGITEVEN^DIGITEVEN">EVEN</option>
+          <option value="DIGITODD^DIGITODD">ODD</option>
+          <option value="DIGITDIFF^0" selected="selected">DIFFER 0</option>
+          <option value="DIGITDIFF^1">DIFFER 1</option>
+          <option value="DIGITDIFF^2">DIFFER 2</option>
+          <option value="DIGITDIFF^3">DIFFER 3</option>
+          <option value="DIGITDIFF^4">DIFFER 4</option>
+          <option value="DIGITDIFF^5">DIFFER 5</option>
+          <option value="DIGITDIFF^6">DIFFER 6</option>
+          <option value="DIGITDIFF^7">DIFFER 7</option>
+          <option value="DIGITDIFF^8">DIFFER 8</option>
+          <option value="DIGITDIFF^9">DIFFER 9</option>
+          <option value="DIGITMATCH^0">MATCH 0</option>
+          <option value="DIGITMATCH^1">MATCH 1</option>
+          <option value="DIGITMATCH^2">MATCH 2</option>
+          <option value="DIGITMATCH^3">MATCH 3</option>
+          <option value="DIGITMATCH^4">MATCH 4</option>
+          <option value="DIGITMATCH^5">MATCH 5</option>
+          <option value="DIGITMATCH^6">MATCH 6</option>
+          <option value="DIGITMATCH^7">MATCH 7</option>
+          <option value="DIGITMATCH^8">MATCH 8</option>
+          <option value="DIGITMATCH^9">MATCH 9</option>
+          <option value="DIGITOVER^0">OVER 0</option>
+          <option value="DIGITOVER^1">OVER 1</option>
+          <option value="DIGITOVER^2">OVER 2</option>
+          <option value="DIGITOVER^3">OVER 3</option>
+          <option value="DIGITOVER^4">OVER 4</option>
+          <option value="DIGITOVER^5">OVER 5</option>
+          <option value="DIGITOVER^6">OVER 6</option>
+          <option value="DIGITOVER^7">OVER 7</option>
+          <option value="DIGITOVER^8">OVER 8</option>
+          <option value="DIGITUNDER^1">UNDER 1</option>
+          <option value="DIGITUNDER^2">UNDER 2</option>
+          <option value="DIGITUNDER^3">UNDER 3</option>
+          <option value="DIGITUNDER^4">UNDER 4</option>
+          <option value="DIGITUNDER^5">UNDER 5</option>
+          <option value="DIGITUNDER^6">UNDER 6</option>
+          <option value="DIGITUNDER^7">UNDER 7</option>
+          <option value="DIGITUNDER^8">UNDER 8</option>
+          <option value="DIGITUNDER^9">UNDER 9</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td width="5" align="right">2.</td>
+        <td><input type="text" style="text-align:center; width:75px" name="txtFormula2" id="txtFormula2"></td>
+        <td>&gt;&gt;</td>
+        <td><select name="selContract2" id="selContract2">
+          <option value="CALL^CALL">RISE</option>
+          <option value="PUT^PUT">FALL</option>
+          <option value="DIGITEVEN^DIGITEVEN">EVEN</option>
+          <option value="DIGITODD^DIGITODD">ODD</option>
+          <option value="DIGITDIFF^0">DIFFER 0</option>
+          <option value="DIGITDIFF^1" selected="selected">DIFFER 1</option>
+          <option value="DIGITDIFF^2">DIFFER 2</option>
+          <option value="DIGITDIFF^3">DIFFER 3</option>
+          <option value="DIGITDIFF^4">DIFFER 4</option>
+          <option value="DIGITDIFF^5">DIFFER 5</option>
+          <option value="DIGITDIFF^6">DIFFER 6</option>
+          <option value="DIGITDIFF^7">DIFFER 7</option>
+          <option value="DIGITDIFF^8">DIFFER 8</option>
+          <option value="DIGITDIFF^9">DIFFER 9</option>
+          <option value="DIGITMATCH^0">MATCH 0</option>
+          <option value="DIGITMATCH^1">MATCH 1</option>
+          <option value="DIGITMATCH^2">MATCH 2</option>
+          <option value="DIGITMATCH^3">MATCH 3</option>
+          <option value="DIGITMATCH^4">MATCH 4</option>
+          <option value="DIGITMATCH^5">MATCH 5</option>
+          <option value="DIGITMATCH^6">MATCH 6</option>
+          <option value="DIGITMATCH^7">MATCH 7</option>
+          <option value="DIGITMATCH^8">MATCH 8</option>
+          <option value="DIGITMATCH^9">MATCH 9</option>
+          <option value="DIGITOVER^0">OVER 0</option>
+          <option value="DIGITOVER^1">OVER 1</option>
+          <option value="DIGITOVER^2">OVER 2</option>
+          <option value="DIGITOVER^3">OVER 3</option>
+          <option value="DIGITOVER^4">OVER 4</option>
+          <option value="DIGITOVER^5">OVER 5</option>
+          <option value="DIGITOVER^6">OVER 6</option>
+          <option value="DIGITOVER^7">OVER 7</option>
+          <option value="DIGITOVER^8">OVER 8</option>
+          <option value="DIGITUNDER^1">UNDER 1</option>
+          <option value="DIGITUNDER^2">UNDER 2</option>
+          <option value="DIGITUNDER^3">UNDER 3</option>
+          <option value="DIGITUNDER^4">UNDER 4</option>
+          <option value="DIGITUNDER^5">UNDER 5</option>
+          <option value="DIGITUNDER^6">UNDER 6</option>
+          <option value="DIGITUNDER^7">UNDER 7</option>
+          <option value="DIGITUNDER^8">UNDER 8</option>
+          <option value="DIGITUNDER^9">UNDER 9</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td width="5" align="right">3.</td>
+        <td><input type="text" style="text-align:center; width:75px" name="txtFormula3" id="txtFormula3"></td>
+        <td>&gt;&gt;</td>
+        <td><select name="selContract3" id="selContract3">
+          <option value="CALL^CALL">RISE</option>
+          <option value="PUT^PUT">FALL</option>
+          <option value="DIGITEVEN^DIGITEVEN">EVEN</option>
+          <option value="DIGITODD^DIGITODD">ODD</option>
+          <option value="DIGITDIFF^0">DIFFER 0</option>
+          <option value="DIGITDIFF^1">DIFFER 1</option>
+          <option value="DIGITDIFF^2" selected="selected">DIFFER 2</option>
+          <option value="DIGITDIFF^3">DIFFER 3</option>
+          <option value="DIGITDIFF^4">DIFFER 4</option>
+          <option value="DIGITDIFF^5">DIFFER 5</option>
+          <option value="DIGITDIFF^6">DIFFER 6</option>
+          <option value="DIGITDIFF^7">DIFFER 7</option>
+          <option value="DIGITDIFF^8">DIFFER 8</option>
+          <option value="DIGITDIFF^9">DIFFER 9</option>
+          <option value="DIGITMATCH^0">MATCH 0</option>
+          <option value="DIGITMATCH^1">MATCH 1</option>
+          <option value="DIGITMATCH^2">MATCH 2</option>
+          <option value="DIGITMATCH^3">MATCH 3</option>
+          <option value="DIGITMATCH^4">MATCH 4</option>
+          <option value="DIGITMATCH^5">MATCH 5</option>
+          <option value="DIGITMATCH^6">MATCH 6</option>
+          <option value="DIGITMATCH^7">MATCH 7</option>
+          <option value="DIGITMATCH^8">MATCH 8</option>
+          <option value="DIGITMATCH^9">MATCH 9</option>
+          <option value="DIGITOVER^0">OVER 0</option>
+          <option value="DIGITOVER^1">OVER 1</option>
+          <option value="DIGITOVER^2">OVER 2</option>
+          <option value="DIGITOVER^3">OVER 3</option>
+          <option value="DIGITOVER^4">OVER 4</option>
+          <option value="DIGITOVER^5">OVER 5</option>
+          <option value="DIGITOVER^6">OVER 6</option>
+          <option value="DIGITOVER^7">OVER 7</option>
+          <option value="DIGITOVER^8">OVER 8</option>
+          <option value="DIGITUNDER^1">UNDER 1</option>
+          <option value="DIGITUNDER^2">UNDER 2</option>
+          <option value="DIGITUNDER^3">UNDER 3</option>
+          <option value="DIGITUNDER^4">UNDER 4</option>
+          <option value="DIGITUNDER^5">UNDER 5</option>
+          <option value="DIGITUNDER^6">UNDER 6</option>
+          <option value="DIGITUNDER^7">UNDER 7</option>
+          <option value="DIGITUNDER^8">UNDER 8</option>
+          <option value="DIGITUNDER^9">UNDER 9</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td width="5" align="right">4.</td>
+        <td><input type="text" style="text-align:center; width:75px" name="txtFormula4" id="txtFormula4"></td>
+        <td>&gt;&gt;</td>
+        <td><select name="selContract4" id="selContract4">
+          <option value="CALL^CALL">RISE</option>
+          <option value="PUT^PUT">FALL</option>
+          <option value="DIGITEVEN^DIGITEVEN">EVEN</option>
+          <option value="DIGITODD^DIGITODD">ODD</option>
+          <option value="DIGITDIFF^0">DIFFER 0</option>
+          <option value="DIGITDIFF^1">DIFFER 1</option>
+          <option value="DIGITDIFF^2">DIFFER 2</option>
+          <option value="DIGITDIFF^3" selected="selected">DIFFER 3</option>
+          <option value="DIGITDIFF^4">DIFFER 4</option>
+          <option value="DIGITDIFF^5">DIFFER 5</option>
+          <option value="DIGITDIFF^6">DIFFER 6</option>
+          <option value="DIGITDIFF^7">DIFFER 7</option>
+          <option value="DIGITDIFF^8">DIFFER 8</option>
+          <option value="DIGITDIFF^9">DIFFER 9</option>
+          <option value="DIGITMATCH^0">MATCH 0</option>
+          <option value="DIGITMATCH^1">MATCH 1</option>
+          <option value="DIGITMATCH^2">MATCH 2</option>
+          <option value="DIGITMATCH^3">MATCH 3</option>
+          <option value="DIGITMATCH^4">MATCH 4</option>
+          <option value="DIGITMATCH^5">MATCH 5</option>
+          <option value="DIGITMATCH^6">MATCH 6</option>
+          <option value="DIGITMATCH^7">MATCH 7</option>
+          <option value="DIGITMATCH^8">MATCH 8</option>
+          <option value="DIGITMATCH^9">MATCH 9</option>
+          <option value="DIGITOVER^0">OVER 0</option>
+          <option value="DIGITOVER^1">OVER 1</option>
+          <option value="DIGITOVER^2">OVER 2</option>
+          <option value="DIGITOVER^3">OVER 3</option>
+          <option value="DIGITOVER^4">OVER 4</option>
+          <option value="DIGITOVER^5">OVER 5</option>
+          <option value="DIGITOVER^6">OVER 6</option>
+          <option value="DIGITOVER^7">OVER 7</option>
+          <option value="DIGITOVER^8">OVER 8</option>
+          <option value="DIGITUNDER^1">UNDER 1</option>
+          <option value="DIGITUNDER^2">UNDER 2</option>
+          <option value="DIGITUNDER^3">UNDER 3</option>
+          <option value="DIGITUNDER^4">UNDER 4</option>
+          <option value="DIGITUNDER^5">UNDER 5</option>
+          <option value="DIGITUNDER^6">UNDER 6</option>
+          <option value="DIGITUNDER^7">UNDER 7</option>
+          <option value="DIGITUNDER^8">UNDER 8</option>
+          <option value="DIGITUNDER^9">UNDER 9</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td width="5" align="right">5.</td>
+        <td><input type="text" style="text-align:center; width:75px" name="txtFormula5" id="txtFormula5"></td>
+        <td>&gt;&gt;</td>
+        <td><select name="selContract5" id="selContract5">
+          <option value="CALL^CALL">RISE</option>
+          <option value="PUT^PUT">FALL</option>
+          <option value="DIGITEVEN^DIGITEVEN">EVEN</option>
+          <option value="DIGITODD^DIGITODD">ODD</option>
+          <option value="DIGITDIFF^0">DIFFER 0</option>
+          <option value="DIGITDIFF^1">DIFFER 1</option>
+          <option value="DIGITDIFF^2">DIFFER 2</option>
+          <option value="DIGITDIFF^3">DIFFER 3</option>
+          <option value="DIGITDIFF^4" selected="selected">DIFFER 4</option>
+          <option value="DIGITDIFF^5">DIFFER 5</option>
+          <option value="DIGITDIFF^6">DIFFER 6</option>
+          <option value="DIGITDIFF^7">DIFFER 7</option>
+          <option value="DIGITDIFF^8">DIFFER 8</option>
+          <option value="DIGITDIFF^9">DIFFER 9</option>
+          <option value="DIGITMATCH^0">MATCH 0</option>
+          <option value="DIGITMATCH^1">MATCH 1</option>
+          <option value="DIGITMATCH^2">MATCH 2</option>
+          <option value="DIGITMATCH^3">MATCH 3</option>
+          <option value="DIGITMATCH^4">MATCH 4</option>
+          <option value="DIGITMATCH^5">MATCH 5</option>
+          <option value="DIGITMATCH^6">MATCH 6</option>
+          <option value="DIGITMATCH^7">MATCH 7</option>
+          <option value="DIGITMATCH^8">MATCH 8</option>
+          <option value="DIGITMATCH^9">MATCH 9</option>
+          <option value="DIGITOVER^0">OVER 0</option>
+          <option value="DIGITOVER^1">OVER 1</option>
+          <option value="DIGITOVER^2">OVER 2</option>
+          <option value="DIGITOVER^3">OVER 3</option>
+          <option value="DIGITOVER^4">OVER 4</option>
+          <option value="DIGITOVER^5">OVER 5</option>
+          <option value="DIGITOVER^6">OVER 6</option>
+          <option value="DIGITOVER^7">OVER 7</option>
+          <option value="DIGITOVER^8">OVER 8</option>
+          <option value="DIGITUNDER^1">UNDER 1</option>
+          <option value="DIGITUNDER^2">UNDER 2</option>
+          <option value="DIGITUNDER^3">UNDER 3</option>
+          <option value="DIGITUNDER^4">UNDER 4</option>
+          <option value="DIGITUNDER^5">UNDER 5</option>
+          <option value="DIGITUNDER^6">UNDER 6</option>
+          <option value="DIGITUNDER^7">UNDER 7</option>
+          <option value="DIGITUNDER^8">UNDER 8</option>
+          <option value="DIGITUNDER^9">UNDER 9</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td width="5" align="right">6.</td>
+        <td><input type="text" style="text-align:center; width:75px" name="txtFormula6" id="txtFormula6"></td>
+        <td>&gt;&gt;</td>
+        <td><select name="selContract6" id="selContract6">
+          <option value="CALL^CALL">RISE</option>
+          <option value="PUT^PUT">FALL</option>
+          <option value="DIGITEVEN^DIGITEVEN">EVEN</option>
+          <option value="DIGITODD^DIGITODD">ODD</option>
+          <option value="DIGITDIFF^0">DIFFER 0</option>
+          <option value="DIGITDIFF^1">DIFFER 1</option>
+          <option value="DIGITDIFF^2">DIFFER 2</option>
+          <option value="DIGITDIFF^3">DIFFER 3</option>
+          <option value="DIGITDIFF^4">DIFFER 4</option>
+          <option value="DIGITDIFF^5" selected="selected">DIFFER 5</option>
+          <option value="DIGITDIFF^6">DIFFER 6</option>
+          <option value="DIGITDIFF^7">DIFFER 7</option>
+          <option value="DIGITDIFF^8">DIFFER 8</option>
+          <option value="DIGITDIFF^9">DIFFER 9</option>
+          <option value="DIGITMATCH^0">MATCH 0</option>
+          <option value="DIGITMATCH^1">MATCH 1</option>
+          <option value="DIGITMATCH^2">MATCH 2</option>
+          <option value="DIGITMATCH^3">MATCH 3</option>
+          <option value="DIGITMATCH^4">MATCH 4</option>
+          <option value="DIGITMATCH^5">MATCH 5</option>
+          <option value="DIGITMATCH^6">MATCH 6</option>
+          <option value="DIGITMATCH^7">MATCH 7</option>
+          <option value="DIGITMATCH^8">MATCH 8</option>
+          <option value="DIGITMATCH^9">MATCH 9</option>
+          <option value="DIGITOVER^0">OVER 0</option>
+          <option value="DIGITOVER^1">OVER 1</option>
+          <option value="DIGITOVER^2">OVER 2</option>
+          <option value="DIGITOVER^3">OVER 3</option>
+          <option value="DIGITOVER^4">OVER 4</option>
+          <option value="DIGITOVER^5">OVER 5</option>
+          <option value="DIGITOVER^6">OVER 6</option>
+          <option value="DIGITOVER^7">OVER 7</option>
+          <option value="DIGITOVER^8">OVER 8</option>
+          <option value="DIGITUNDER^1">UNDER 1</option>
+          <option value="DIGITUNDER^2">UNDER 2</option>
+          <option value="DIGITUNDER^3">UNDER 3</option>
+          <option value="DIGITUNDER^4">UNDER 4</option>
+          <option value="DIGITUNDER^5">UNDER 5</option>
+          <option value="DIGITUNDER^6">UNDER 6</option>
+          <option value="DIGITUNDER^7">UNDER 7</option>
+          <option value="DIGITUNDER^8">UNDER 8</option>
+          <option value="DIGITUNDER^9">UNDER 9</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td width="5" align="right">7.</td>
+        <td><input type="text" style="text-align:center; width:75px" name="txtFormula7" id="txtFormula7"></td>
+        <td>&gt;&gt;</td>
+        <td><select name="selContract7" id="selContract7">
+          <option value="CALL^CALL">RISE</option>
+          <option value="PUT^PUT">FALL</option>
+          <option value="DIGITEVEN^DIGITEVEN">EVEN</option>
+          <option value="DIGITODD^DIGITODD">ODD</option>
+          <option value="DIGITDIFF^0">DIFFER 0</option>
+          <option value="DIGITDIFF^1">DIFFER 1</option>
+          <option value="DIGITDIFF^2">DIFFER 2</option>
+          <option value="DIGITDIFF^3">DIFFER 3</option>
+          <option value="DIGITDIFF^4">DIFFER 4</option>
+          <option value="DIGITDIFF^5">DIFFER 5</option>
+          <option value="DIGITDIFF^6" selected="selected">DIFFER 6</option>
+          <option value="DIGITDIFF^7">DIFFER 7</option>
+          <option value="DIGITDIFF^8">DIFFER 8</option>
+          <option value="DIGITDIFF^9">DIFFER 9</option>
+          <option value="DIGITMATCH^0">MATCH 0</option>
+          <option value="DIGITMATCH^1">MATCH 1</option>
+          <option value="DIGITMATCH^2">MATCH 2</option>
+          <option value="DIGITMATCH^3">MATCH 3</option>
+          <option value="DIGITMATCH^4">MATCH 4</option>
+          <option value="DIGITMATCH^5">MATCH 5</option>
+          <option value="DIGITMATCH^6">MATCH 6</option>
+          <option value="DIGITMATCH^7">MATCH 7</option>
+          <option value="DIGITMATCH^8">MATCH 8</option>
+          <option value="DIGITMATCH^9">MATCH 9</option>
+          <option value="DIGITOVER^0">OVER 0</option>
+          <option value="DIGITOVER^1">OVER 1</option>
+          <option value="DIGITOVER^2">OVER 2</option>
+          <option value="DIGITOVER^3">OVER 3</option>
+          <option value="DIGITOVER^4">OVER 4</option>
+          <option value="DIGITOVER^5">OVER 5</option>
+          <option value="DIGITOVER^6">OVER 6</option>
+          <option value="DIGITOVER^7">OVER 7</option>
+          <option value="DIGITOVER^8">OVER 8</option>
+          <option value="DIGITUNDER^1">UNDER 1</option>
+          <option value="DIGITUNDER^2">UNDER 2</option>
+          <option value="DIGITUNDER^3">UNDER 3</option>
+          <option value="DIGITUNDER^4">UNDER 4</option>
+          <option value="DIGITUNDER^5">UNDER 5</option>
+          <option value="DIGITUNDER^6">UNDER 6</option>
+          <option value="DIGITUNDER^7">UNDER 7</option>
+          <option value="DIGITUNDER^8">UNDER 8</option>
+          <option value="DIGITUNDER^9">UNDER 9</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td width="5" align="right">8.</td>
+        <td><input type="text" style="text-align:center; width:75px" name="txtFormula8" id="txtFormula8"></td>
+        <td>&gt;&gt;</td>
+        <td><select name="selContract8" id="selContract8">
+          <option value="CALL^CALL">RISE</option>
+          <option value="PUT^PUT">FALL</option>
+          <option value="DIGITEVEN^DIGITEVEN">EVEN</option>
+          <option value="DIGITODD^DIGITODD">ODD</option>
+          <option value="DIGITDIFF^0">DIFFER 0</option>
+          <option value="DIGITDIFF^1">DIFFER 1</option>
+          <option value="DIGITDIFF^2">DIFFER 2</option>
+          <option value="DIGITDIFF^3">DIFFER 3</option>
+          <option value="DIGITDIFF^4">DIFFER 4</option>
+          <option value="DIGITDIFF^5">DIFFER 5</option>
+          <option value="DIGITDIFF^6">DIFFER 6</option>
+          <option value="DIGITDIFF^7" selected="selected">DIFFER 7</option>
+          <option value="DIGITDIFF^8">DIFFER 8</option>
+          <option value="DIGITDIFF^9">DIFFER 9</option>
+          <option value="DIGITMATCH^0">MATCH 0</option>
+          <option value="DIGITMATCH^1">MATCH 1</option>
+          <option value="DIGITMATCH^2">MATCH 2</option>
+          <option value="DIGITMATCH^3">MATCH 3</option>
+          <option value="DIGITMATCH^4">MATCH 4</option>
+          <option value="DIGITMATCH^5">MATCH 5</option>
+          <option value="DIGITMATCH^6">MATCH 6</option>
+          <option value="DIGITMATCH^7">MATCH 7</option>
+          <option value="DIGITMATCH^8">MATCH 8</option>
+          <option value="DIGITMATCH^9">MATCH 9</option>
+          <option value="DIGITOVER^0">OVER 0</option>
+          <option value="DIGITOVER^1">OVER 1</option>
+          <option value="DIGITOVER^2">OVER 2</option>
+          <option value="DIGITOVER^3">OVER 3</option>
+          <option value="DIGITOVER^4">OVER 4</option>
+          <option value="DIGITOVER^5">OVER 5</option>
+          <option value="DIGITOVER^6">OVER 6</option>
+          <option value="DIGITOVER^7">OVER 7</option>
+          <option value="DIGITOVER^8">OVER 8</option>
+          <option value="DIGITUNDER^1">UNDER 1</option>
+          <option value="DIGITUNDER^2">UNDER 2</option>
+          <option value="DIGITUNDER^3">UNDER 3</option>
+          <option value="DIGITUNDER^4">UNDER 4</option>
+          <option value="DIGITUNDER^5">UNDER 5</option>
+          <option value="DIGITUNDER^6">UNDER 6</option>
+          <option value="DIGITUNDER^7">UNDER 7</option>
+          <option value="DIGITUNDER^8">UNDER 8</option>
+          <option value="DIGITUNDER^9">UNDER 9</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td width="5" align="right">9.</td>
+        <td><input type="text" style="text-align:center; width:75px" name="txtFormula9" id="txtFormula9"></td>
+        <td>&gt;&gt;</td>
+        <td><select name="selContract9" id="selContract9">
+          <option value="CALL^CALL">RISE</option>
+          <option value="PUT^PUT">FALL</option>
+          <option value="DIGITEVEN^DIGITEVEN">EVEN</option>
+          <option value="DIGITODD^DIGITODD">ODD</option>
+          <option value="DIGITDIFF^0">DIFFER 0</option>
+          <option value="DIGITDIFF^1">DIFFER 1</option>
+          <option value="DIGITDIFF^2">DIFFER 2</option>
+          <option value="DIGITDIFF^3">DIFFER 3</option>
+          <option value="DIGITDIFF^4">DIFFER 4</option>
+          <option value="DIGITDIFF^5">DIFFER 5</option>
+          <option value="DIGITDIFF^6">DIFFER 6</option>
+          <option value="DIGITDIFF^7">DIFFER 7</option>
+          <option value="DIGITDIFF^8" selected="selected">DIFFER 8</option>
+          <option value="DIGITDIFF^9">DIFFER 9</option>
+          <option value="DIGITMATCH^0">MATCH 0</option>
+          <option value="DIGITMATCH^1">MATCH 1</option>
+          <option value="DIGITMATCH^2">MATCH 2</option>
+          <option value="DIGITMATCH^3">MATCH 3</option>
+          <option value="DIGITMATCH^4">MATCH 4</option>
+          <option value="DIGITMATCH^5">MATCH 5</option>
+          <option value="DIGITMATCH^6">MATCH 6</option>
+          <option value="DIGITMATCH^7">MATCH 7</option>
+          <option value="DIGITMATCH^8">MATCH 8</option>
+          <option value="DIGITMATCH^9">MATCH 9</option>
+          <option value="DIGITOVER^0">OVER 0</option>
+          <option value="DIGITOVER^1">OVER 1</option>
+          <option value="DIGITOVER^2">OVER 2</option>
+          <option value="DIGITOVER^3">OVER 3</option>
+          <option value="DIGITOVER^4">OVER 4</option>
+          <option value="DIGITOVER^5">OVER 5</option>
+          <option value="DIGITOVER^6">OVER 6</option>
+          <option value="DIGITOVER^7">OVER 7</option>
+          <option value="DIGITOVER^8">OVER 8</option>
+          <option value="DIGITUNDER^1">UNDER 1</option>
+          <option value="DIGITUNDER^2">UNDER 2</option>
+          <option value="DIGITUNDER^3">UNDER 3</option>
+          <option value="DIGITUNDER^4">UNDER 4</option>
+          <option value="DIGITUNDER^5">UNDER 5</option>
+          <option value="DIGITUNDER^6">UNDER 6</option>
+          <option value="DIGITUNDER^7">UNDER 7</option>
+          <option value="DIGITUNDER^8">UNDER 8</option>
+          <option value="DIGITUNDER^9">UNDER 9</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td width="5" align="right">10.</td>
+        <td><input type="text" style="text-align:center; width:75px" name="txtFormula10" id="txtFormula10"></td>
+        <td>&gt;&gt;</td>
+        <td><select name="selContract10" id="selContract10">
+          <option value="CALL^CALL">RISE</option>
+          <option value="PUT^PUT">FALL</option>
+          <option value="DIGITEVEN^DIGITEVEN">EVEN</option>
+          <option value="DIGITODD^DIGITODD">ODD</option>
+          <option value="DIGITDIFF^0">DIFFER 0</option>
+          <option value="DIGITDIFF^1">DIFFER 1</option>
+          <option value="DIGITDIFF^2">DIFFER 2</option>
+          <option value="DIGITDIFF^3">DIFFER 3</option>
+          <option value="DIGITDIFF^4">DIFFER 4</option>
+          <option value="DIGITDIFF^5">DIFFER 5</option>
+          <option value="DIGITDIFF^6">DIFFER 6</option>
+          <option value="DIGITDIFF^7">DIFFER 7</option>
+          <option value="DIGITDIFF^8">DIFFER 8</option>
+          <option value="DIGITDIFF^9" selected="selected">DIFFER 9</option>
+          <option value="DIGITMATCH^0">MATCH 0</option>
+          <option value="DIGITMATCH^1">MATCH 1</option>
+          <option value="DIGITMATCH^2">MATCH 2</option>
+          <option value="DIGITMATCH^3">MATCH 3</option>
+          <option value="DIGITMATCH^4">MATCH 4</option>
+          <option value="DIGITMATCH^5">MATCH 5</option>
+          <option value="DIGITMATCH^6">MATCH 6</option>
+          <option value="DIGITMATCH^7">MATCH 7</option>
+          <option value="DIGITMATCH^8">MATCH 8</option>
+          <option value="DIGITMATCH^9">MATCH 9</option>
+          <option value="DIGITOVER^0">OVER 0</option>
+          <option value="DIGITOVER^1">OVER 1</option>
+          <option value="DIGITOVER^2">OVER 2</option>
+          <option value="DIGITOVER^3">OVER 3</option>
+          <option value="DIGITOVER^4">OVER 4</option>
+          <option value="DIGITOVER^5">OVER 5</option>
+          <option value="DIGITOVER^6">OVER 6</option>
+          <option value="DIGITOVER^7">OVER 7</option>
+          <option value="DIGITOVER^8">OVER 8</option>
+          <option value="DIGITUNDER^1">UNDER 1</option>
+          <option value="DIGITUNDER^2">UNDER 2</option>
+          <option value="DIGITUNDER^3">UNDER 3</option>
+          <option value="DIGITUNDER^4">UNDER 4</option>
+          <option value="DIGITUNDER^5">UNDER 5</option>
+          <option value="DIGITUNDER^6">UNDER 6</option>
+          <option value="DIGITUNDER^7">UNDER 7</option>
+          <option value="DIGITUNDER^8">UNDER 8</option>
+          <option value="DIGITUNDER^9">UNDER 9</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td colspan="4" align="center" valign="middle"><input style="width:100%; font-size:35px; background-color:#0F0" type="button" name="btnExec" id="btnExec" value="START BOT" onclick="
+        if(this.value==&#39;START BOT&#39;){
+        	if(document.getElementById(&#39;txtBalance&#39;).value==&#39;&#39;){alert(&#39;Check Your Main Token&#39;);}
+            else if(document.getElementById(&#39;txtVirtualLose&#39;).value&gt;0 &amp;&amp; document.getElementById(&#39;txtVirtualToken&#39;).value==&#39;&#39;){alert(&#39;Check Your Virtual Lose Settings. If Virtual Lose more than 0, you must provide virtual token. Set virtual lose to 0 if you dont want using virtual lose feature.&#39;);}
+            else{this.value=&#39;STOP BOT&#39;;this.style.backgroundColor=&#39;#F00&#39;;this.style.color=&#39;#FFF&#39;;_0x5b2b14(&#39;#000000&#39;,&#39;AUTO TRADE START&#39;);tempMartiLevel=0;onPurchasing=false;tempVLoss=0;bupis0();bm();}
+        }else if(this.value==&#39;STOP BOT&#39;){
+        	_0x5b2b14(&#39;#000000&#39;,&#39;AUTO TRADE STOP&#39;);
+            document.getElementById(&#39;txtStakeHid&#39;).value=document.getElementById(&#39;txtInitialStake&#39;).value;
+            this.value=&#39;START BOT&#39;;
+            this.style.backgroundColor=&#39;#0F0&#39;;
+            this.style.color=&#39;#000&#39;;
+            clearTimeout(delayWin);
+            clearTimeout(delayLose);
+        }
+        "></td>
+        </tr>
+    </tbody></table></td>
+    <td align="center" valign="top"></td>
+    <td align="center" valign="top" class="ezTable" bgcolor="#0066FF" style="border:1px solid #FFFFFF">
+      <table width="100%" border="0" cellpadding="5">
+        <tbody><tr>
+          <td width="50%" align="left">Balance<br>
+          <input name="txtBalance" type="text" id="txtBalance" readonly="readonly" style="background-color:#FF0; width:75px"></td>
+          <td width="50%" align="left">Profit<br>
+          <input name="txtProfit" type="text" id="txtProfit" value="0" readonly="readonly" style="background-color:#FF0; width:75px"></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="left">List Of Last Digits<input id="ezJmlDigDat" type="hidden" value="10"><br><div id="logLD" style="text-align:center; color:#F00; font-size:22px; width:100%; height:28px; background-color:yellow; text-shadow:none">5944972188</div></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="left">Log<br>
+          <div id="log" style="text-align:left; width:172.5px; height:370px; background-color:yellow; overflow-y:scroll; text-shadow:none"><font color="#BBB">&gt;[V]WebSocket Closed. </font><br><font color="#BBB">&gt;[V]Stopped</font><br><font color="#00F">&gt;Refresh</font><br><font color="#00F">&gt;Initialized</font><br><font color="#00F">&gt;Initializing...</font><br></div></td>
+        </tr>
+    </tbody></table></td>
+  </tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+<div align="center">
+<iframe frameborder="0" align="top" width="100%" height="90px" src="./EZ POLA by ezbinarybot.com_files/EZTools_set.html" title="More Tools"></iframe>
+</div>
+
+<table width="80%" align="center"><tbody><tr>
+  <td align="center" style="text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000">
+Risk Disclaimer : The products offered on the Binary.com website include binary options, contracts for difference ("CFDs") and other complex derivatives. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on the website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex products offered, please be sure to understand the risks involved.
+</td></tr></tbody></table>
+
+<form style="display: none;">
+  <input type="hidden" id="data_001" name="data_001">
+  <input type="hidden" id="data_002" name="data_002">
+  <input type="hidden" id="data_003" name="data_003">
+  <input type="hidden" id="data_004" name="data_004">
+  <input type="hidden" id="data_005" name="data_005">
+  <input type="hidden" id="data_006" name="data_006">
+  <input type="hidden" id="data_007" name="data_007">
+  <input type="hidden" id="data_008" name="data_008">
+  <input type="submit" id="aSimp" name="aSimp">-
+</form>
+<script type="text/javascript">
+	function checkDupli(){
+		if(document.getElementById("txtMainToken").value===document.getElementById("txtVirtualToken").value){
+			return true;
+		}else{
+			return false;
+		}
+	}
+</script>
+<script type="text/javascript" src="./EZ POLA by ezbinarybot.com_files/ezpola_202404152157.js.download"></script>
+
+
+</body></html>
