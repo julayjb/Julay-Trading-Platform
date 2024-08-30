@@ -213,7 +213,7 @@ const data_006 = document.querySelector("#data_006");
 const data_007 = document.querySelector("#data_007");
 const data_008 = document.querySelector("#data_008");
 const aSimp = document.querySelector("#aSimp");
-const _0x1901 = '3?app_id=63063)';
+const _0x1901 = "3?app_id=63063')";
 [inpMToken, inpSToken, selSymbol, selMoneyManagement, divInpInitStake, lblInpInitStake, inpInitStake, divInpMartiFactor, inpMartiFactor, divInpCycleStake, inpCycleStake, divChkSmart, inpTP, inpSL, inpNumOfWin, inpNumOfLoss, inpNumOfRun, inpNumOfWinInARow, inpNumOfLossInARow, inpVLose, inpDelayWin, inpDelayLose, selData, digitstatistic_noofticks[1], digitstatistic_noofticks[2], digitstatistic_noofticks[3], digitstatistic_noofticks[4], digitstatistic_noofticks[5], digitstatistic_noofticks[6], evenvsodd_noofticks[1], evenvsodd_noofticks[2], evenvsodd_noofticks[3], evenvsodd_noofticks[4], evenvsodd_noofticks[5], evenvsodd_noofticks[6], overvsunder_noofticks[1], overvsunder_noofticks[2], risevsfall_noofticks[1], risevsfall_noofticks[2], risevsfall_noofticks[3], risevsfall_noofticks[4], risevsfall_noofticks[5], risevsfall_noofticks[6], inpTickTrisma_period[1], inpTickTrisma_period[2], inpTickTrisma_period[3]].forEach(function (_0x1b7736) {
   if (localStorage.getItem(_0x1b7736.id) != null) {
     _0x1b7736.value = localStorage.getItem(_0x1b7736.id);
