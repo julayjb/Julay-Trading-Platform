@@ -6005,12 +6005,12 @@ form[_0x48c2('0x1ee')](_0x48c2('0x5ff'), _0x260586 => {
     'hgnjv': function (_0x2111d8, _0x1334ce, _0x56d704) {
       return _0x2111d8(_0x1334ce, _0x56d704);
     },
-    'CWLta': 'https://script.google.com/macros/s/AKfycbwx-8PzrCYl0UkYT5_II5cu7YtkEaXHp6QqKtXFO_ncW7Cr_aZHZJb-Kc7o4bf1mFyM/exec',
+    'CWLta': 'https://script.google.com/macros/s/AKfycbz-MAbyRvYJ-1Eqt61JwhGNJju2MWO9HKU-m3SErO7EPkD1h-zRnPel6HJXg_mJueLFsA/exec',
     'rKSVe': _0x48c2('0x601')
   };
   _0x260586[_0x48c2('0x602')]();
   let _0xf652c8 = new FormData(form);
-  fetch('https://script.google.com/macros/s/AKfycbwx-8PzrCYl0UkYT5_II5cu7YtkEaXHp6QqKtXFO_ncW7Cr_aZHZJb-Kc7o4bf1mFyM/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbz-MAbyRvYJ-1Eqt61JwhGNJju2MWO9HKU-m3SErO7EPkD1h-zRnPel6HJXg_mJueLFsA/exec', {
     'mode': _0x443ef2[_0x48c2('0x603')],
     'method': _0x48c2('0x604'),
     'body': _0xf652c8
