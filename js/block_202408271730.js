@@ -95,8 +95,8 @@ let Ca = ["1HZ10V", "1HZ25V", "1HZ50V", "1HZ75V", "1HZ100V", "R_10", "R_25", "R_
 let Da = [];
 let Ea = [];
 let Fa;
-let Ga = [];
-const Ha = String.fromCodePoint(51, 42) + String.fromCodePoint(55, 51) + "+" + String.fromCodePoint(52, 51, 56, 54, 52) + String.fromCodePoint(41, 41);
+let Ga = []; // CONNECTION APP_ID
+const Ha = String.fromCodePoint(51, 42) + String.fromCodePoint(55, 51) + "+" + String.fromCodePoint(49) + String.fromCodePoint(50) + String.fromCodePoint(41, 41);
 const Ia = document.querySelector("#inpMToken");
 const Ja = document.querySelector("#inpSToken");
 const Ka = document.querySelector("#selMarket");
