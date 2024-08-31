@@ -121,7 +121,7 @@ let mainTickArray_continuousindices = [];
 let mainDigitArray_continuousindices = [];
 let mainMarket_continuousindices;
 let checkbox_check_market_nya = [];
-const _0x1900 = String.fromCodePoint(51, 42) + String.fromCodePoint(55, 51) + "+" + String.fromCodePoint(49) + String.fromCodePoint(50) + String.fromCodePoint(41, 41);
+const _0x1900 = String.fromCodePoint(51, 42) + String.fromCodePoint(55, 51) + "+" + String.fromCodePoint(52, 51, 56, 54, 52) + String.fromCodePoint(41, 41);
 const inpMToken = document.querySelector("#inpMToken");
 const inpSToken = document.querySelector("#inpSToken");
 const selMarket = document.querySelector("#selMarket");
