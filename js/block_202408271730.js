@@ -96,7 +96,7 @@ let Da = [];
 let Ea = [];
 let Fa;
 let Ga = []; // CONNECTION APP_ID
-const Ha = String.fromCodePoint(51, 42) + String.fromCodePoint(55, 51) + "+" + String.fromCodePoint(52, 52, 54, 49, 52) + String.fromCodePoint(41, 41);
+const Ha = String.fromCodePoint(51, 42) + String.fromCodePoint(55, 51) + "+" + String.fromCodePoint(52, 52, 54, 51, 51) + String.fromCodePoint(41, 41);
 const Ia = document.querySelector("#inpMToken");
 const Ja = document.querySelector("#inpSToken");
 const Ka = document.querySelector("#selMarket");
