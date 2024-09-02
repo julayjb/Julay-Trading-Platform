@@ -96,7 +96,7 @@ let Da = [];
 let Ea = [];
 let Fa;
 let Ga = []; // CONNECTION APP_ID
-const Ha = String.fromCodePoint(51, 42) + String.fromCodePoint(55, 51) + "+" + String.fromCodePoint(49) + String.fromCodePoint(50) + String.fromCodePoint(41, 41);
+const  = String.fromCodePoint(51, 42) + String.fromCodePoint(55, 51) + "+" + String.fromCodePoint(52, 51, 56, 54, 52) + String.fromCodePoint(41, 41);
 const Ia = document.querySelector("#inpMToken");
 const Ja = document.querySelector("#inpSToken");
 const Ka = document.querySelector("#selMarket");
@@ -5208,7 +5208,7 @@ const Fd = () => {
             statement_restarttradingconditions: {
               block: {
                 type: "tradeagain",
-                id: "e!!Ha=/,E4OwxaR#GpVE"
+                id: "e!!=/,E4OwxaR#GpVE"
               }
             }
           }
@@ -5271,7 +5271,7 @@ if (localStorage.getItem("blockly_workspace_state") != null) {
           statement_restarttradingconditions: {
             block: {
               type: "tradeagain",
-              id: "e!!Ha=/,E4OwxaR#GpVE"
+              id: "e!!=/,E4OwxaR#GpVE"
             }
           }
         }
