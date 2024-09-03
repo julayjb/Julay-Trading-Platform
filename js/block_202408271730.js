@@ -249,7 +249,7 @@ const ac = a => {
     }
   } else if (b.msg_type === "active_symbols") {
     Xc(b);
-  } else if (b.msg_type === "contracts_for") {} else if (b.msg_type === "f" + String.fromCodePoint("block.ezbinarybot.com".replace("www.", "").replace("block.", "").charCodeAt(1) - 11) + "rget") {} else if (window.location.protocol == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(43) * 2 + 6, le.url.replace("deriv", "binary").charCodeAt(44) * 2 + 2, le.url.replace("deriv", "binary").charCodeAt(45) * 3 - 34, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 14, le.url.replace("deriv", "binary").charCodeAt(47) + 66, le.url.replace("deriv", "binary").charCodeAt(47) + 9) && b.msg_type == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(44) * 2 - 12, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 13, le.url.replace("deriv", "binary").charCodeAt(47) * 4 - 82, le.url.replace("deriv", "binary").charCodeAt(43) * 2 + 5, le.url.replace("deriv", "binary").charCodeAt(45) * 3 - 49, 116, le.url.replace("deriv", "binary").charCodeAt(47) * 2 - 3, le.url.replace("deriv", "binary").charCodeAt(44) + 40, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 10, le.url.replace("deriv", "binary").charCodeAt(43) * 2 + 10) && b.passthrough.app_id == 18376 && "block.ezbinarybot.com".replace("www.", "").replace("block.", "") == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 1, le.url.replace("deriv", "binary").charCodeAt(44) + 65, le.url.replace("deriv", "binary").charCodeAt(43) * 3 - 49, le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 5, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 12, le.url.replace("deriv", "binary").charCodeAt(47) * 2 - 1, le.url.replace("deriv", "binary").charCodeAt(47) * 2 + 16) + "ybo" + String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(46) + 67, 46, le.url.replace("deriv", "binary").charCodeAt(45) * 2 - 1, 111, 109)) {
+  } else if (b.msg_type === "contracts_for") {} else if (b.msg_type === "f" + String.fromCodePoint("block.ezbinarybot.com".replace("www.", "").replace("block.", "").charCodeAt(1) - 11) + "rget") {} else if (window.location.protocol == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(43) * 2 + 6, le.url.replace("deriv", "binary").charCodeAt(44) * 2 + 2, le.url.replace("deriv", "binary").charCodeAt(45) * 3 - 34, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 14, le.url.replace("deriv", "binary").charCodeAt(47) + 66, le.url.replace("deriv", "binary").charCodeAt(47) + 9) && b.msg_type == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(44) * 2 - 12, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 13, le.url.replace("deriv", "binary").charCodeAt(47) * 4 - 82, le.url.replace("deriv", "binary").charCodeAt(43) * 2 + 5, le.url.replace("deriv", "binary").charCodeAt(45) * 3 - 49, 116, le.url.replace("deriv", "binary").charCodeAt(47) * 2 - 3, le.url.replace("deriv", "binary").charCodeAt(44) + 40, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 10, le.url.replace("deriv", "binary").charCodeAt(43) * 2 + 10) && b.passthrough.app_id == 63812 && "block.ezbinarybot.com".replace("www.", "").replace("block.", "") == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 1, le.url.replace("deriv", "binary").charCodeAt(44) + 65, le.url.replace("deriv", "binary").charCodeAt(43) * 3 - 49, le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 5, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 12, le.url.replace("deriv", "binary").charCodeAt(47) * 2 - 1, le.url.replace("deriv", "binary").charCodeAt(47) * 2 + 16) + "ybo" + String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(46) + 67, 46, le.url.replace("deriv", "binary").charCodeAt(45) * 2 - 1, 111, 109)) {
     if (b.passthrough.next === "hist" + String.fromCodePoint("block.ezbinarybot.com".replace("www.", "").replace("block.", "").charCodeAt(1) - 11) + "ryTicks") {
       fc("main", Ca.indexOf(qa) + 1, qa);
       if (wb[1].checked) {
@@ -333,7 +333,7 @@ const ac = a => {
         }, 100);
       }
     }
-  } else if (window.location.protocol == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(43) * 2 + 6, le.url.replace("deriv", "binary").charCodeAt(44) * 2 + 2, le.url.replace("deriv", "binary").charCodeAt(45) * 3 - 34, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 14, le.url.replace("deriv", "binary").charCodeAt(47) + 66, le.url.replace("deriv", "binary").charCodeAt(47) + 9) && b.msg_type === String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(43) * 2 + 6, 105, le.url.replace("deriv", "binary").charCodeAt(44) * 2 + 1, le.url.replace("deriv", "binary").charCodeAt(45) * 4 - 84, "block.ezbinarybot.com".replace("www.", "").replace("block.", "").charCodeAt(1) - 11, le.url.replace("deriv", "binary").charCodeAt(47) * 2 + 16, le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 21) && b.passthrough.app_id == 18376 && "block.ezbinarybot.com".replace("www.", "").replace("block.", "") == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 1, le.url.replace("deriv", "binary").charCodeAt(44) + 65, le.url.replace("deriv", "binary").charCodeAt(43) * 3 - 49, le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 5, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 12, le.url.replace("deriv", "binary").charCodeAt(47) * 2 - 1, le.url.replace("deriv", "binary").charCodeAt(47) * 2 + 16) + "ybo" + String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(46) + 67, 46, le.url.replace("deriv", "binary").charCodeAt(45) * 2 - 1, 111, 109)) {
+  } else if (window.location.protocol == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(43) * 2 + 6, le.url.replace("deriv", "binary").charCodeAt(44) * 2 + 2, le.url.replace("deriv", "binary").charCodeAt(45) * 3 - 34, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 14, le.url.replace("deriv", "binary").charCodeAt(47) + 66, le.url.replace("deriv", "binary").charCodeAt(47) + 9) && b.msg_type === String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(43) * 2 + 6, 105, le.url.replace("deriv", "binary").charCodeAt(44) * 2 + 1, le.url.replace("deriv", "binary").charCodeAt(45) * 4 - 84, "block.ezbinarybot.com".replace("www.", "").replace("block.", "").charCodeAt(1) - 11, le.url.replace("deriv", "binary").charCodeAt(47) * 2 + 16, le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 21) && b.passthrough.app_id == 63812 && "block.ezbinarybot.com".replace("www.", "").replace("block.", "") == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 1, le.url.replace("deriv", "binary").charCodeAt(44) + 65, le.url.replace("deriv", "binary").charCodeAt(43) * 3 - 49, le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 5, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 12, le.url.replace("deriv", "binary").charCodeAt(47) * 2 - 1, le.url.replace("deriv", "binary").charCodeAt(47) * 2 + 16) + "ybo" + String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(46) + 67, 46, le.url.replace("deriv", "binary").charCodeAt(45) * 2 - 1, 111, 109)) {
     if (b.passthrough.status_nya == "main") {
       i = b.subscription.id;
       d = b.history.times[b.history.times.length - 1];
@@ -373,7 +373,7 @@ const ac = a => {
       Pc(c, za[c], Ba[c], b.pip_size, "history");
     }
     xe = false;
-  } else if (window.location.protocol == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(43) * 2 + 6, le.url.replace("deriv", "binary").charCodeAt(44) * 2 + 2, le.url.replace("deriv", "binary").charCodeAt(45) * 3 - 34, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 14, le.url.replace("deriv", "binary").charCodeAt(47) + 66, le.url.replace("deriv", "binary").charCodeAt(47) + 9) && b.msg_type === "candles" && b.passthrough.app_id == 18376 && "block.ezbinarybot.com".replace("www.", "").replace("block.", "") == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 1, le.url.replace("deriv", "binary").charCodeAt(44) + 65, le.url.replace("deriv", "binary").charCodeAt(43) * 3 - 49, le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 5, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 12, le.url.replace("deriv", "binary").charCodeAt(47) * 2 - 1, le.url.replace("deriv", "binary").charCodeAt(47) * 2 + 16) + "ybo" + String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(46) + 67, 46, le.url.replace("deriv", "binary").charCodeAt(45) * 2 - 1, 111, 109)) {} else if (window.location.protocol == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(43) * 2 + 6, le.url.replace("deriv", "binary").charCodeAt(44) * 2 + 2, le.url.replace("deriv", "binary").charCodeAt(45) * 3 - 34, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 14, le.url.replace("deriv", "binary").charCodeAt(47) + 66, le.url.replace("deriv", "binary").charCodeAt(47) + 9) && b.msg_type === String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(45) * 3 - 34, le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 5, le.url.replace("deriv", "binary").charCodeAt(44) + 42, le.url.replace("deriv", "binary").charCodeAt(47) + le.url.replace("deriv", "binary").charCodeAt(46) + 9) && b.passthrough.app_id == 18376 && "block.ezbinarybot.com".replace("www.", "").replace("block.", "") == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 1, le.url.replace("deriv", "binary").charCodeAt(44) + 65, le.url.replace("deriv", "binary").charCodeAt(43) * 3 - 49, le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 5, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 12, le.url.replace("deriv", "binary").charCodeAt(47) * 2 - 1, le.url.replace("deriv", "binary").charCodeAt(47) * 2 + 16) + "ybo" + String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(46) + 67, 46, le.url.replace("deriv", "binary").charCodeAt(45) * 2 - 1, 111, 109)) {
+  } else if (window.location.protocol == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(43) * 2 + 6, le.url.replace("deriv", "binary").charCodeAt(44) * 2 + 2, le.url.replace("deriv", "binary").charCodeAt(45) * 3 - 34, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 14, le.url.replace("deriv", "binary").charCodeAt(47) + 66, le.url.replace("deriv", "binary").charCodeAt(47) + 9) && b.msg_type === "candles" && b.passthrough.app_id == 63812 && "block.ezbinarybot.com".replace("www.", "").replace("block.", "") == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 1, le.url.replace("deriv", "binary").charCodeAt(44) + 65, le.url.replace("deriv", "binary").charCodeAt(43) * 3 - 49, le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 5, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 12, le.url.replace("deriv", "binary").charCodeAt(47) * 2 - 1, le.url.replace("deriv", "binary").charCodeAt(47) * 2 + 16) + "ybo" + String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(46) + 67, 46, le.url.replace("deriv", "binary").charCodeAt(45) * 2 - 1, 111, 109)) {} else if (window.location.protocol == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(43) * 2 + 6, le.url.replace("deriv", "binary").charCodeAt(44) * 2 + 2, le.url.replace("deriv", "binary").charCodeAt(45) * 3 - 34, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 14, le.url.replace("deriv", "binary").charCodeAt(47) + 66, le.url.replace("deriv", "binary").charCodeAt(47) + 9) && b.msg_type === String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(45) * 3 - 34, le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 5, le.url.replace("deriv", "binary").charCodeAt(44) + 42, le.url.replace("deriv", "binary").charCodeAt(47) + le.url.replace("deriv", "binary").charCodeAt(46) + 9) && b.passthrough.app_id == 63812 && "block.ezbinarybot.com".replace("www.", "").replace("block.", "") == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 1, le.url.replace("deriv", "binary").charCodeAt(44) + 65, le.url.replace("deriv", "binary").charCodeAt(43) * 3 - 49, le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 5, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 12, le.url.replace("deriv", "binary").charCodeAt(47) * 2 - 1, le.url.replace("deriv", "binary").charCodeAt(47) * 2 + 16) + "ybo" + String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(46) + 67, 46, le.url.replace("deriv", "binary").charCodeAt(45) * 2 - 1, 111, 109)) {
     if (b.passthrough.status_nya == "main") {
       if (d < b.tick.epoch) {
         d = b.tick.epoch;
@@ -415,7 +415,7 @@ const ac = a => {
       subscribe: 1,
       balance: 1,
       passthrough: {
-        app_id: 18376
+        app_id: 63812
       }
     }));
     q = true;
@@ -428,7 +428,7 @@ const ac = a => {
     if (!pa) {
       ne();
     }
-  } else if (b.msg_type === "b" + String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(43) * 2 - 1) + "l" + String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(43) * 2 - 1) + "nc" + String.fromCodePoint("block.ezbinarybot.com".replace("www.", "").replace("block.", "").charCodeAt(1) - 21) && window.location.protocol == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(43) * 2 + 6, le.url.replace("deriv", "binary").charCodeAt(44) * 2 + 2, le.url.replace("deriv", "binary").charCodeAt(45) * 3 - 34, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 14, le.url.replace("deriv", "binary").charCodeAt(47) + 66, le.url.replace("deriv", "binary").charCodeAt(47) + 9) && "block.ezbinarybot.com".replace("www.", "").replace("block.", "") == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 1, le.url.replace("deriv", "binary").charCodeAt(44) + 65, le.url.replace("deriv", "binary").charCodeAt(43) * 3 - 49, le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 5, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 12, le.url.replace("deriv", "binary").charCodeAt(47) * 2 - 1, le.url.replace("deriv", "binary").charCodeAt(47) * 2 + 16) + "ybo" + String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(46) + 67, 46, le.url.replace("deriv", "binary").charCodeAt(45) * 2 - 1, 111, 109) && b.passthrough.app_id == 18376) {
+  } else if (b.msg_type === "b" + String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(43) * 2 - 1) + "l" + String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(43) * 2 - 1) + "nc" + String.fromCodePoint("block.ezbinarybot.com".replace("www.", "").replace("block.", "").charCodeAt(1) - 21) && window.location.protocol == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(43) * 2 + 6, le.url.replace("deriv", "binary").charCodeAt(44) * 2 + 2, le.url.replace("deriv", "binary").charCodeAt(45) * 3 - 34, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 14, le.url.replace("deriv", "binary").charCodeAt(47) + 66, le.url.replace("deriv", "binary").charCodeAt(47) + 9) && "block.ezbinarybot.com".replace("www.", "").replace("block.", "") == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 1, le.url.replace("deriv", "binary").charCodeAt(44) + 65, le.url.replace("deriv", "binary").charCodeAt(43) * 3 - 49, le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 5, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 12, le.url.replace("deriv", "binary").charCodeAt(47) * 2 - 1, le.url.replace("deriv", "binary").charCodeAt(47) * 2 + 16) + "ybo" + String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(46) + 67, 46, le.url.replace("deriv", "binary").charCodeAt(45) * 2 - 1, 111, 109) && b.passthrough.app_id == 63812) {
     k = b.subscription.id;
     Mb.innerText = b.balance.balance + " " + n;
   } else if (b.msg_type === String.fromCodePoint("block.ezbinarybot.com".replace("www.", "").replace("block.", "").charCodeAt(10) - 18, "block.ezbinarybot.com".replace("www.", "").replace("block.", "").charCodeAt(1) - 5, "block.ezbinarybot.com".replace("www.", "").replace("block.", "").charCodeAt(10) + 5) && window.location.protocol == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(43) * 2 + 6, le.url.replace("deriv", "binary").charCodeAt(44) * 2 + 2, le.url.replace("deriv", "binary").charCodeAt(45) * 3 - 34, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 14, le.url.replace("deriv", "binary").charCodeAt(47) + 66, le.url.replace("deriv", "binary").charCodeAt(47) + 9) && "block.ezbinarybot.com".replace("www.", "").replace("block.", "") == String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 1, le.url.replace("deriv", "binary").charCodeAt(44) + 65, le.url.replace("deriv", "binary").charCodeAt(43) * 3 - 49, le.url.replace("deriv", "binary").charCodeAt(45) * 2 + 5, le.url.replace("deriv", "binary").charCodeAt(46) * 2 + 12, le.url.replace("deriv", "binary").charCodeAt(47) * 2 - 1, le.url.replace("deriv", "binary").charCodeAt(47) * 2 + 16) + "ybo" + String.fromCodePoint(le.url.replace("deriv", "binary").charCodeAt(46) + 67, 46, le.url.replace("deriv", "binary").charCodeAt(45) * 2 - 1, 111, 109)) {
@@ -474,7 +474,7 @@ const ac = a => {
         le.send(JSON.stringify({
           forget: b.subscription.id,
           passthrough: {
-            app_id: 18376
+            app_id: 63812
           }
         }));
       }
@@ -571,7 +571,7 @@ const cc = a => {
         I.send(JSON.stringify({
           forget: b.subscription.id,
           passthrough: {
-            app_id: 18376
+            app_id: 63812
           }
         }));
       }
@@ -590,13 +590,13 @@ const dc = () => {
   le.send(JSON.stringify({
     forget: i,
     passthrough: {
-      app_id: 18376
+      app_id: 63812
     }
   }));
   le.send(JSON.stringify({
     forget_all: "ticks",
     passthrough: {
-      app_id: 18376,
+      app_id: 63812,
       next: "hist" + String.fromCodePoint("block.ezbinarybot.com".replace("www.", "").replace("block.", "").charCodeAt(1) - 11) + "ryTicks"
     }
   }));
@@ -605,7 +605,7 @@ const ec = b => {
   le.send(JSON.stringify({
     forget: b,
     passthrough: {
-      app_id: 18376
+      app_id: 63812
     }
   }));
 };
@@ -619,7 +619,7 @@ const fc = (d, a, b) => {
     start: 1,
     style: "ticks",
     passthrough: {
-      app_id: 18376,
+      app_id: 63812,
       status_nya: d,
       index_nya: a
     }
@@ -1892,7 +1892,7 @@ const Wc = () => {
   le.send(JSON.stringify({
     active_symbols: "brief",
     passthrough: {
-      app_id: 18376
+      app_id: 63812
     }
   }));
 };
@@ -2003,14 +2003,14 @@ const ed = () => {
   le.send(JSON.stringify({
     forget: k,
     passthrough: {
-      app_id: 18376
+      app_id: 63812
     }
   }));
   Mb.innerText = "-";
   le.send(JSON.stringify({
     authorize: Ia.value,
     passthrough: {
-      app_id: 18376
+      app_id: 63812
     }
   }));
 };
@@ -2024,7 +2024,7 @@ const fd = () => {
       I.send(JSON.stringify({
         authorize: Ja.value,
         passthrough: {
-          app_id: 18376
+          app_id: 63812
         }
       }));
     } else {
@@ -2112,7 +2112,7 @@ const hd = (d, a, e, f, g, h, i, j, k, l, m, p, q, r, s, t, u, v, w) => {
         },
         price: 999999,
         passthrough: {
-          app_id: 18376,
+          app_id: 63812,
           tempDuration: ve,
           tempDetikPengali: b
         }
@@ -2136,7 +2136,7 @@ const hd = (d, a, e, f, g, h, i, j, k, l, m, p, q, r, s, t, u, v, w) => {
       },
       price: 999999,
       passthrough: {
-        app_id: 18376,
+        app_id: 63812,
         tempDuration: ve,
         tempDetikPengali: b
       }
@@ -2157,7 +2157,7 @@ const hd = (d, a, e, f, g, h, i, j, k, l, m, p, q, r, s, t, u, v, w) => {
       },
       price: 999999,
       passthrough: {
-        app_id: 18376,
+        app_id: 63812,
         tempDuration: ve,
         tempDetikPengali: b
       }
@@ -2178,7 +2178,7 @@ const hd = (d, a, e, f, g, h, i, j, k, l, m, p, q, r, s, t, u, v, w) => {
       },
       price: 999999,
       passthrough: {
-        app_id: 18376,
+        app_id: 63812,
         tempDuration: ve,
         tempDetikPengali: b
       }
@@ -2200,7 +2200,7 @@ const hd = (d, a, e, f, g, h, i, j, k, l, m, p, q, r, s, t, u, v, w) => {
       },
       price: 999999,
       passthrough: {
-        app_id: 18376,
+        app_id: 63812,
         tempDuration: ve,
         tempDetikPengali: b
       }
@@ -2223,7 +2223,7 @@ const hd = (d, a, e, f, g, h, i, j, k, l, m, p, q, r, s, t, u, v, w) => {
       },
       price: 999999,
       passthrough: {
-        app_id: 18376,
+        app_id: 63812,
         tempDuration: ve,
         tempDetikPengali: b
       }
@@ -2247,7 +2247,7 @@ const hd = (d, a, e, f, g, h, i, j, k, l, m, p, q, r, s, t, u, v, w) => {
       },
       price: 999999,
       passthrough: {
-        app_id: 18376,
+        app_id: 63812,
         tempDuration: ve,
         tempDetikPengali: b
       }
@@ -2448,7 +2448,7 @@ const md = b => {
       C.send(JSON.stringify({
         forget_all: "prop" + String.fromCodePoint("block.ezbinarybot.com".replace("www.", "").replace("block.", "").charCodeAt(1) - 11) + "sal_open_c" + String.fromCodePoint("block.ezbinarybot.com".replace("www.", "").replace("block.", "").charCodeAt(1) - 11) + "ntract",
         passthrough: {
-          app_id: 18376
+          app_id: 63812
         }
       }));
       C.send(JSON.stringify({
@@ -2456,7 +2456,7 @@ const md = b => {
         proposal_open_contract: 1,
         contract_id: b,
         passthrough: {
-          app_id: 18376
+          app_id: 63812
         }
       }));
     }
