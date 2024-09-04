@@ -65,6 +65,18 @@ let fa;
 let ga;
 let ha;
 let ia;
+let lastCont_askprice;
+let lastCont_payout;
+let lastCont_profit;
+let lastCont_contracttype;
+let lastCont_entrytime;
+let lastCont_entryvalue;
+let lastCont_entryvaluestring;
+let lastCont_exittime;
+let lastCont_exitvalue;
+let lastCont_exitvaluestring;
+let lastCont_barrier;
+let lastCont_result;
 let ja = false;
 let ka = () => {
   ja = false;
