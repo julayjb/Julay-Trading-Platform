@@ -2682,7 +2682,7 @@ Blockly.defineBlocksWithJsonArray([{
 }]);
 javascript.javascriptGenerator.forBlock.runonceatstart = function (e, a) {
   var b = a.statementToCode(e, "statement_runonceatstart");
-  var c = "ka=()=>{ja=false;" + b + ";stakeNow=getStakeBegin();pa=true;timeMayOP=Date.now()+600;}";
+  var c = "ka=()=>{ja=false;" + b + ";stakeNow=_d();pa=true;timeMayOP=Date.now()+600;}";
   return c;
 };
 Blockly.defineBlocksWithJsonArray([{
