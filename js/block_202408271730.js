@@ -1727,7 +1727,7 @@ const Oc = (i, y, a, b) => {
     }
   }
   if (b == "history") {
-    xe = false;
+     = false;
   }
   ;
   Rc();
@@ -1744,7 +1744,7 @@ const Pc = (h, a, b, c, d) => {
     document.getElementById("continuousindices_" + h + "_digits").value = b;
   }
   if (d == "history") {
-    xe = false;
+     = false;
   }
   ;
   if (Date.now() - g[h] < 500) {
@@ -1752,7 +1752,7 @@ const Pc = (h, a, b, c, d) => {
   }
   ;
   g[h] = Date.now();
-  if (pa && Cb.src.split("/").pop() === "icon_stop.png" && !xe && navigator.onLine) {
+  if (pa && Cb.src.split("/").pop() === "icon_stop.png" && ! && navigator.onLine) {
     od(1);
     if (!kb.checked || lb.value <= 0) {
       C = le;
@@ -1764,7 +1764,7 @@ const Pc = (h, a, b, c, d) => {
     } else {
       C = le;
     }
-    if (Date.now() >= D && navigator.onLine && !xe) {
+    if (Date.now() >= D && navigator.onLine && !) {
       Da = a;
       Ea = b;
       Fa = Ca[h - 1];
@@ -1819,7 +1819,7 @@ const Rc = () => {
   }
   ;
   a = Date.now();
-  if (pa && Cb.src.split("/").pop() === "icon_stop.png" && !xe && navigator.onLine) {
+  if (pa && Cb.src.split("/").pop() === "icon_stop.png" && ! && navigator.onLine) {
     me();
   } else if (u.length != 0) {}
 };
@@ -4642,7 +4642,7 @@ Blockly.defineBlocksWithJsonArray([{
 }]);
 javascript.javascriptGenerator.forBlock.setmarket = function (e, a) {
   var b = e.getFieldValue("market_nya");
-  var c = "if(qa!=\"" + b.split("|")[0] + "\"){qa=\"" + b.split("|")[0] + "\";document.getElementById(\"lblMarket\").innerText=\"" + b.split("|")[1] + "\";xe();};";
+  var c = "if(qa!=\"" + b.split("|")[0] + "\"){qa=\"" + b.split("|")[0] + "\";document.getElementById(\"lblMarket\").innerText=\"" + b.split("|")[1] + "\";dc();};";
   return c;
 };
 Blockly.defineBlocksWithJsonArray([{
