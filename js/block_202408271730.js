@@ -2984,7 +2984,7 @@ Blockly.defineBlocksWithJsonArray([{
   helpUrl: ""
 }]);
 javascript.javascriptGenerator.forBlock.lastdigit = function (c, a) {
-  return ["digitArrayUtama.at(-1)*1", Blockly.JavaScript.ORDER_NONE];
+  return ["h.at(-1)*1", Blockly.JavaScript.ORDER_NONE];
 };
 Blockly.defineBlocksWithJsonArray([{
   type: "1001lastdigitlist",
@@ -2996,7 +2996,7 @@ Blockly.defineBlocksWithJsonArray([{
   helpUrl: ""
 }]);
 javascript.javascriptGenerator.forBlock["1001lastdigitlist"] = function (c, a) {
-  return ["digitArrayUtama", Blockly.JavaScript.ORDER_NONE];
+  return ["h", Blockly.JavaScript.ORDER_NONE];
 };
 Blockly.defineBlocksWithJsonArray([{
   type: "thelast10digits",
