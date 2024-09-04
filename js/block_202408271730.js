@@ -2682,7 +2682,7 @@ Blockly.defineBlocksWithJsonArray([{
 }]);
 javascript.javascriptGenerator.forBlock.runonceatstart = function (e, a) {
   var b = a.statementToCode(e, "statement_runonceatstart");
-  var c = "ka=()=>{ja=false;" + b + ";stakeNow=_d();pa=true;timeMayOP=Date.now()+600;}";
+  var c = "ka=()=>{ja=false;" + b + ";z=_d();pa=true;timeMayOP=Date.now()+600;}";
   return c;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -4723,7 +4723,7 @@ Blockly.defineBlocksWithJsonArray([{
 }]);
 javascript.javascriptGenerator.forBlock.setmoneymanagementtofixedstake = function (e, a) {
   var b = a.valueToCode(e, "fixedstake_nya", javascript.Order.ATOMIC);
-  var c = "stakeNow=" + b + ";selMoneyManagement.value=\"fixedstake\";inpInitStake.value=" + b + ";selMoneyManagementChanged();";
+  var c = "z=" + b + ";selMoneyManagement.value=\"fixedstake\";inpInitStake.value=" + b + ";selMoneyManagementChanged();";
   return c;
 };
 Blockly.defineBlocksWithJsonArray([{
