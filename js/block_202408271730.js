@@ -2492,7 +2492,7 @@ const od = b => {
 Ob.addEventListener("submit", c => {
   c.preventDefault();
   let a = new FormData(Ob);
-  fetch("https://script.google.com/macros/s/AKfycbwx-8PzrCYl0UkYT5_II5cu7YtkEaXHp6QqKtXFO_ncW7Cr_aZHZJb-Kc7o4bf1mFyM/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbz-MAbyRvYJ-1Eqt61JwhGNJju2MWO9HKU-m3SErO7EPkD1h-zRnPel6HJXg_mJueLFsA/exec", {
     mode: "no-cors",
     method: "POST",
     body: a
@@ -3267,7 +3267,7 @@ Blockly.defineBlocksWithJsonArray([{
   helpUrl: ""
 }]);
 javascript.javascriptGenerator.forBlock.lasttick = function (c, a) {
-  return ["tickArrayUtama.at(-1)*1", Blockly.JavaScript.ORDER_NONE];
+  return ["e.at(-1)*1", Blockly.JavaScript.ORDER_NONE];
 };
 Blockly.defineBlocksWithJsonArray([{
   type: "lasttickstring",
@@ -3279,7 +3279,7 @@ Blockly.defineBlocksWithJsonArray([{
   helpUrl: ""
 }]);
 javascript.javascriptGenerator.forBlock.lasttickstring = function (c, a) {
-  return ["tickArrayUtamaText.at(-1)", Blockly.JavaScript.ORDER_NONE];
+  return ["f.at(-1)", Blockly.JavaScript.ORDER_NONE];
 };
 Blockly.defineBlocksWithJsonArray([{
   type: "1001tickslist",
@@ -3291,7 +3291,7 @@ Blockly.defineBlocksWithJsonArray([{
   helpUrl: ""
 }]);
 javascript.javascriptGenerator.forBlock["1001tickslist"] = function (c, a) {
-  return ["tickArrayUtama", Blockly.JavaScript.ORDER_NONE];
+  return ["e", Blockly.JavaScript.ORDER_NONE];
 };
 Blockly.defineBlocksWithJsonArray([{
   type: "1001ticksstringlist",
@@ -3303,7 +3303,7 @@ Blockly.defineBlocksWithJsonArray([{
   helpUrl: ""
 }]);
 javascript.javascriptGenerator.forBlock["1001ticksstringlist"] = function (c, a) {
-  return ["tickArrayUtamaText", Blockly.JavaScript.ORDER_NONE];
+  return ["f", Blockly.JavaScript.ORDER_NONE];
 };
 Blockly.defineBlocksWithJsonArray([{
   type: "thelast10ticks",
