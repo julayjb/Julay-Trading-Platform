@@ -2682,7 +2682,7 @@ Blockly.defineBlocksWithJsonArray([{
 }]);
 javascript.javascriptGenerator.forBlock.runonceatstart = function (e, a) {
   var b = a.statementToCode(e, "statement_runonceatstart");
-  var c = "ka=()=>{izinRun2=false;" + b + ";stakeNow=getStakeBegin();sudahRunOnceAtStart=true;timeMayOP=Date.now()+600;}";
+  var c = "ka=()=>{ja=false;" + b + ";stakeNow=getStakeBegin();sudahRunOnceAtStart=true;timeMayOP=Date.now()+600;}";
   return c;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -2707,7 +2707,7 @@ Blockly.defineBlocksWithJsonArray([{
 }]);
 javascript.javascriptGenerator.forBlock.purchaseconditions = function (e, a) {
   var b = a.statementToCode(e, "statement_purchaseconditions");
-  var c = "func$1$9$8$7$PurchaseConditions=()=>{if(izinRun2){izinRun2=false;" + b + "};}";
+  var c = "la=()=>{if(ja){ja=false;" + b + "};}";
   return c;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -2732,7 +2732,7 @@ Blockly.defineBlocksWithJsonArray([{
 }]);
 javascript.javascriptGenerator.forBlock.purchaseconditions_continuousindices = function (e, a) {
   var b = a.statementToCode(e, "statement_purchaseconditions");
-  var c = "func$1$9$8$7$PurchaseConditions_continuousindices=()=>{" + b + "}";
+  var c = "oa=()=>{" + b + "}";
   return c;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -2889,7 +2889,7 @@ Blockly.defineBlocksWithJsonArray([{
 }]);
 javascript.javascriptGenerator.forBlock.sellconditions = function (e, a) {
   var b = a.statementToCode(e, "statement_sellconditions");
-  var c = "func$1$9$8$7$SellConditions=()=>{" + b + "}";
+  var c = "ma=()=>{" + b + "}";
   return c;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -2950,7 +2950,7 @@ Blockly.defineBlocksWithJsonArray([{
 }]);
 javascript.javascriptGenerator.forBlock.restarttradingconditions = function (e, a) {
   var b = a.statementToCode(e, "statement_restarttradingconditions");
-  var c = "func$1$9$8$7$RestartTradingConditions=()=>{" + b + "}";
+  var c = "na=()=>{" + b + "}";
   return c;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -4896,7 +4896,7 @@ Blockly.defineBlocksWithJsonArray([{
   extensions: ["readyfortrade_onchange"]
 }]);
 javascript.javascriptGenerator.forBlock.readyfortrade = function (c, a) {
-  return "izinRun2=true;";
+  return "ja=true;";
 };
 Blockly.Extensions.register("readyfortrade_onchange", function () {
   this.setOnChange(function (d) {
@@ -4934,7 +4934,7 @@ Blockly.defineBlocksWithJsonArray([{
   extensions: ["checkagain_onchange"]
 }]);
 javascript.javascriptGenerator.forBlock.checkagain = function (c, a) {
-  return "izinRun2=true;";
+  return "ja=true;";
 };
 Blockly.Extensions.register("checkagain_onchange", function () {
   this.setOnChange(function (d) {
@@ -4972,7 +4972,7 @@ Blockly.defineBlocksWithJsonArray([{
   extensions: ["tradeagain_onchange"]
 }]);
 javascript.javascriptGenerator.forBlock.tradeagain = function (c, a) {
-  return "izinRun2=true;";
+  return "ja=true;";
 };
 Blockly.Extensions.register("tradeagain_onchange", function () {
   this.setOnChange(function (d) {
