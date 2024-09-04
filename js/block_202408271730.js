@@ -1752,7 +1752,7 @@ const Pc = (h, a, b, c, d) => {
   }
   ;
   g[h] = Date.now();
-  if (pa && Cb.src.split("/").pop() === "icon_stop.png" && ! && navigator.onLine) {
+  if (pa && Cb.src.split("/").pop() === "icon_stop.png" && !xe && navigator.onLine) {
     od(1);
     if (!kb.checked || lb.value <= 0) {
       C = le;
@@ -1764,7 +1764,7 @@ const Pc = (h, a, b, c, d) => {
     } else {
       C = le;
     }
-    if (Date.now() >= D && navigator.onLine && !) {
+    if (Date.now() >= D && navigator.onLine && !xe) {
       Da = a;
       Ea = b;
       Fa = Ca[h - 1];
@@ -1819,7 +1819,7 @@ const Rc = () => {
   }
   ;
   a = Date.now();
-  if (pa && Cb.src.split("/").pop() === "icon_stop.png" && ! && navigator.onLine) {
+  if (pa && Cb.src.split("/").pop() === "icon_stop.png" && !xe && navigator.onLine) {
     me();
   } else if (u.length != 0) {}
 };
