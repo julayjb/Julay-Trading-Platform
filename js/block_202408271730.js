@@ -2682,7 +2682,7 @@ Blockly.defineBlocksWithJsonArray([{
 }]);
 javascript.javascriptGenerator.forBlock.runonceatstart = function (e, a) {
   var b = a.statementToCode(e, "statement_runonceatstart");
-  var c = "ka=()=>{ja=false;" + b + ";stakeNow=getStakeBegin();sudahRunOnceAtStart=true;timeMayOP=Date.now()+600;}";
+  var c = "ka=()=>{ja=false;" + b + ";stakeNow=getStakeBegin();pa=true;timeMayOP=Date.now()+600;}";
   return c;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -2902,7 +2902,7 @@ Blockly.defineBlocksWithJsonArray([{
   helpUrl: ""
 }]);
 javascript.javascriptGenerator.forBlock.sellisavailable = function (c, a) {
-  return ["(isContractValidToSell[sedangPantauContractPos]==1)?true:false", Blockly.JavaScript.ORDER_NONE];
+  return ["(isContractValidToSell[ra]==1)?true:false", Blockly.JavaScript.ORDER_NONE];
 };
 Blockly.defineBlocksWithJsonArray([{
   type: "sellprofitloss",
@@ -2914,7 +2914,7 @@ Blockly.defineBlocksWithJsonArray([{
   helpUrl: ""
 }]);
 javascript.javascriptGenerator.forBlock.sellprofitloss = function (c, a) {
-  return ["sellProfitLoss[sedangPantauContractPos]", Blockly.JavaScript.ORDER_NONE];
+  return ["sellProfitLoss[ra]", Blockly.JavaScript.ORDER_NONE];
 };
 Blockly.defineBlocksWithJsonArray([{
   type: "sellatmarket",
@@ -3520,7 +3520,7 @@ Blockly.defineBlocksWithJsonArray([{
 }]);
 javascript.javascriptGenerator.forBlock.getstataccu = function (h, a) {
   var b = h.getFieldValue("market_nya");
-  var c = b == "activemarket" ? "mainSymbol" : b == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + b.split("|")[0] + "\"";
+  var c = b == "activemarket" ? "qa" : b == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + b.split("|")[0] + "\"";
   var d = a.valueToCode(h, "growthRate_nya", javascript.Order.ATOMIC);
   var e = a.valueToCode(h, "arrTick_nya", javascript.Order.ATOMIC);
   var f = "getStatAccu(" + e + "," + c + "," + d + ")";
@@ -3615,7 +3615,7 @@ Blockly.defineBlocksWithJsonArray([{
 javascript.javascriptGenerator.forBlock.purchase_diff_match = function (l, a) {
   var b = l.getFieldValue("selcontract_nya");
   var c = l.getFieldValue("market_nya");
-  var d = c == "activemarket" ? "mainSymbol" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
+  var d = c == "activemarket" ? "qa" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
   var e = l.getFieldValue("account_nya");
   var f = l.getFieldValue("stakeAM_nya");
   var g = a.valueToCode(l, "stake_nya", javascript.Order.ATOMIC);
@@ -3673,7 +3673,7 @@ Blockly.defineBlocksWithJsonArray([{
 javascript.javascriptGenerator.forBlock.purchase_over_under = function (l, a) {
   var b = l.getFieldValue("selcontract_nya");
   var c = l.getFieldValue("market_nya");
-  var d = c == "activemarket" ? "mainSymbol" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
+  var d = c == "activemarket" ? "qa" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
   var e = l.getFieldValue("account_nya");
   var f = l.getFieldValue("stakeAM_nya");
   var g = a.valueToCode(l, "stake_nya", javascript.Order.ATOMIC);
@@ -3728,7 +3728,7 @@ Blockly.defineBlocksWithJsonArray([{
 javascript.javascriptGenerator.forBlock.purchase_even_odd = function (k, a) {
   var b = k.getFieldValue("selcontract_nya");
   var c = k.getFieldValue("market_nya");
-  var d = c == "activemarket" ? "mainSymbol" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
+  var d = c == "activemarket" ? "qa" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
   var e = k.getFieldValue("account_nya");
   var f = k.getFieldValue("stakeAM_nya");
   var g = a.valueToCode(k, "stake_nya", javascript.Order.ATOMIC);
@@ -3786,7 +3786,7 @@ Blockly.defineBlocksWithJsonArray([{
 javascript.javascriptGenerator.forBlock.purchase_rise_fall = function (l, a) {
   var b = l.getFieldValue("selcontract_nya");
   var c = l.getFieldValue("market_nya");
-  var d = c == "activemarket" ? "mainSymbol" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
+  var d = c == "activemarket" ? "qa" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
   var e = l.getFieldValue("account_nya");
   var f = l.getFieldValue("stakeAM_nya");
   var g = a.valueToCode(l, "stake_nya", javascript.Order.ATOMIC);
@@ -3848,7 +3848,7 @@ Blockly.defineBlocksWithJsonArray([{
 javascript.javascriptGenerator.forBlock.purchase_higher_lower = function (m, a) {
   var b = m.getFieldValue("selcontract_nya");
   var c = m.getFieldValue("market_nya");
-  var d = c == "activemarket" ? "mainSymbol" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
+  var d = c == "activemarket" ? "qa" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
   var e = m.getFieldValue("account_nya");
   var f = m.getFieldValue("stakeAM_nya");
   var g = a.valueToCode(m, "stake_nya", javascript.Order.ATOMIC);
@@ -3911,7 +3911,7 @@ Blockly.defineBlocksWithJsonArray([{
 javascript.javascriptGenerator.forBlock.purchase_touch_notouch = function (m, a) {
   var b = m.getFieldValue("selcontract_nya");
   var c = m.getFieldValue("market_nya");
-  var d = c == "activemarket" ? "mainSymbol" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
+  var d = c == "activemarket" ? "qa" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
   var e = m.getFieldValue("account_nya");
   var f = m.getFieldValue("stakeAM_nya");
   var g = a.valueToCode(m, "stake_nya", javascript.Order.ATOMIC);
@@ -3977,7 +3977,7 @@ Blockly.defineBlocksWithJsonArray([{
 javascript.javascriptGenerator.forBlock.purchase_endsbetween_endsoutside = function (n, a) {
   var b = n.getFieldValue("selcontract_nya");
   var c = n.getFieldValue("market_nya");
-  var d = c == "activemarket" ? "mainSymbol" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
+  var d = c == "activemarket" ? "qa" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
   var e = n.getFieldValue("account_nya");
   var f = n.getFieldValue("stakeAM_nya");
   var g = a.valueToCode(n, "stake_nya", javascript.Order.ATOMIC);
@@ -4044,7 +4044,7 @@ Blockly.defineBlocksWithJsonArray([{
 javascript.javascriptGenerator.forBlock.purchase_staysbetween_goesoutside = function (n, a) {
   var b = n.getFieldValue("selcontract_nya");
   var c = n.getFieldValue("market_nya");
-  var d = c == "activemarket" ? "mainSymbol" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
+  var d = c == "activemarket" ? "qa" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
   var e = n.getFieldValue("account_nya");
   var f = n.getFieldValue("stakeAM_nya");
   var g = a.valueToCode(n, "stake_nya", javascript.Order.ATOMIC);
@@ -4101,7 +4101,7 @@ Blockly.defineBlocksWithJsonArray([{
 javascript.javascriptGenerator.forBlock.purchase_asianup_asiandown = function (k, a) {
   var b = k.getFieldValue("selcontract_nya");
   var c = k.getFieldValue("market_nya");
-  var d = c == "activemarket" ? "mainSymbol" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
+  var d = c == "activemarket" ? "qa" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
   var e = k.getFieldValue("account_nya");
   var f = k.getFieldValue("stakeAM_nya");
   var g = a.valueToCode(k, "stake_nya", javascript.Order.ATOMIC);
@@ -4158,7 +4158,7 @@ Blockly.defineBlocksWithJsonArray([{
 javascript.javascriptGenerator.forBlock.purchase_highclose_closelow_highlow = function (l, a) {
   var b = l.getFieldValue("selcontract_nya");
   var c = l.getFieldValue("market_nya");
-  var d = c == "activemarket" ? "mainSymbol" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
+  var d = c == "activemarket" ? "qa" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
   var e = l.getFieldValue("account_nya");
   var f = l.getFieldValue("stakeAM_nya");
   var g = a.valueToCode(l, "stake_nya", javascript.Order.ATOMIC);
@@ -4217,7 +4217,7 @@ Blockly.defineBlocksWithJsonArray([{
 javascript.javascriptGenerator.forBlock.purchase_resetcall_resetput = function (l, a) {
   var b = l.getFieldValue("selcontract_nya");
   var c = l.getFieldValue("market_nya");
-  var d = c == "activemarket" ? "mainSymbol" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
+  var d = c == "activemarket" ? "qa" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
   var e = l.getFieldValue("account_nya");
   var f = l.getFieldValue("stakeAM_nya");
   var g = a.valueToCode(l, "stake_nya", javascript.Order.ATOMIC);
@@ -4274,7 +4274,7 @@ Blockly.defineBlocksWithJsonArray([{
 javascript.javascriptGenerator.forBlock.purchase_hightick_lowtick = function (k, a) {
   var b = k.getFieldValue("selcontract_nya");
   var c = k.getFieldValue("market_nya");
-  var d = c == "activemarket" ? "mainSymbol" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
+  var d = c == "activemarket" ? "qa" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
   var e = k.getFieldValue("account_nya");
   var f = k.getFieldValue("stakeAM_nya");
   var g = a.valueToCode(k, "stake_nya", javascript.Order.ATOMIC);
@@ -4328,7 +4328,7 @@ Blockly.defineBlocksWithJsonArray([{
 javascript.javascriptGenerator.forBlock.purchase_onlyups_onlydowns = function (k, a) {
   var b = k.getFieldValue("selcontract_nya");
   var c = k.getFieldValue("market_nya");
-  var d = c == "activemarket" ? "mainSymbol" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
+  var d = c == "activemarket" ? "qa" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
   var e = k.getFieldValue("account_nya");
   var f = k.getFieldValue("stakeAM_nya");
   var g = a.valueToCode(k, "stake_nya", javascript.Order.ATOMIC);
@@ -4385,7 +4385,7 @@ Blockly.defineBlocksWithJsonArray([{
 javascript.javascriptGenerator.forBlock.purchase_accumulatorup = function (l, a) {
   var b = l.getFieldValue("selcontract_nya");
   var c = l.getFieldValue("market_nya");
-  var d = c == "activemarket" ? "mainSymbol" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
+  var d = c == "activemarket" ? "qa" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
   var e = l.getFieldValue("account_nya");
   var f = l.getFieldValue("stakeAM_nya");
   var g = a.valueToCode(l, "stake_nya", javascript.Order.ATOMIC);
@@ -4449,7 +4449,7 @@ Blockly.defineBlocksWithJsonArray([{
 javascript.javascriptGenerator.forBlock.purchase_multiplyup_multiplydown = function (m, a) {
   var b = m.getFieldValue("selcontract_nya");
   var c = m.getFieldValue("market_nya");
-  var d = c == "activemarket" ? "mainSymbol" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
+  var d = c == "activemarket" ? "qa" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
   var e = m.getFieldValue("account_nya");
   var f = m.getFieldValue("stakeAM_nya");
   var g = a.valueToCode(m, "stake_nya", javascript.Order.ATOMIC);
@@ -4512,7 +4512,7 @@ Blockly.defineBlocksWithJsonArray([{
 javascript.javascriptGenerator.forBlock.purchase_vanillalongcall_vanillalongput = function (m, a) {
   var b = m.getFieldValue("selcontract_nya");
   var c = m.getFieldValue("market_nya");
-  var d = c == "activemarket" ? "mainSymbol" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
+  var d = c == "activemarket" ? "qa" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
   var e = m.getFieldValue("account_nya");
   var f = m.getFieldValue("stakeAM_nya");
   var g = a.valueToCode(m, "stake_nya", javascript.Order.ATOMIC);
@@ -4575,7 +4575,7 @@ Blockly.defineBlocksWithJsonArray([{
 javascript.javascriptGenerator.forBlock.purchase_turboslong_turbosshort = function (m, a) {
   var b = m.getFieldValue("selcontract_nya");
   var c = m.getFieldValue("market_nya");
-  var d = c == "activemarket" ? "mainSymbol" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
+  var d = c == "activemarket" ? "qa" : c == "mainMarket_continuousindices" ? "mainMarket_continuousindices" : "\"" + c.split("|")[0] + "\"";
   var e = m.getFieldValue("account_nya");
   var f = m.getFieldValue("stakeAM_nya");
   var g = a.valueToCode(m, "stake_nya", javascript.Order.ATOMIC);
@@ -4642,7 +4642,7 @@ Blockly.defineBlocksWithJsonArray([{
 }]);
 javascript.javascriptGenerator.forBlock.setmarket = function (e, a) {
   var b = e.getFieldValue("market_nya");
-  var c = "if(mainSymbol!=\"" + b.split("|")[0] + "\"){mainSymbol=\"" + b.split("|")[0] + "\";document.getElementById(\"lblMarket\").innerText=\"" + b.split("|")[1] + "\";forgetAllTicks();};";
+  var c = "if(qa!=\"" + b.split("|")[0] + "\"){qa=\"" + b.split("|")[0] + "\";document.getElementById(\"lblMarket\").innerText=\"" + b.split("|")[1] + "\";forgetAllTicks();};";
   return c;
 };
 Blockly.defineBlocksWithJsonArray([{
