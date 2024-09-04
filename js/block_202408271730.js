@@ -4642,7 +4642,7 @@ Blockly.defineBlocksWithJsonArray([{
 }]);
 javascript.javascriptGenerator.forBlock.setmarket = function (e, a) {
   var b = e.getFieldValue("market_nya");
-  var c = "if(qa!=\"" + b.split("|")[0] + "\"){qa=\"" + b.split("|")[0] + "\";document.getElementById(\"lblMarket\").innerText=\"" + b.split("|")[1] + "\";forgetAllTicks();};";
+  var c = "if(qa!=\"" + b.split("|")[0] + "\"){qa=\"" + b.split("|")[0] + "\";document.getElementById(\"lblMarket\").innerText=\"" + b.split("|")[1] + "\";xe();};";
   return c;
 };
 Blockly.defineBlocksWithJsonArray([{
