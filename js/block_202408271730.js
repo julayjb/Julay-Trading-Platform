@@ -5557,6 +5557,20 @@ const ee = (n, a, b, c, d, e, f, g, h, i, j, k, l) => {
   ha = j;
   ia = l ? b >= 0 ? "virtualwin" : "virtualloss" : b >= 0 ? "win" : "loss";
 };
+const fillDataLastCont = (n, a, b, c, d, e, f, g, h, i, j, k, l) => {
+  lastCont_askprice = n;
+  lastCont_payout = a;
+  lastCont_profit = b;
+  lastCont_contracttype = c;
+  lastCont_entrytime = new Date(d * 1000);
+  lastCont_entryvalue = e;
+  lastCont_entryvaluestring = f;
+  lastCont_exittime = new Date(g * 1000);
+  lastCont_exitvalue = h;
+  lastCont_exitvaluestring = i;
+  lastCont_barrier = j;
+  lastCont_result = l ? b >= 0 ? "virtualwin" : "virtualloss" : b >= 0 ? "win" : "loss";
+};
 $(document).ready(function () {
   $("#myInput").on("keyup", function () {
     var b = $(this).val().toLowerCase();
