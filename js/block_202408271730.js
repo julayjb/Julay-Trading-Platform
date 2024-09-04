@@ -3625,7 +3625,7 @@ javascript.javascriptGenerator.forBlock.purchase_diff_match = function (l, a) {
   ;
   var m = a.valueToCode(l, "inpduration_nya", javascript.Order.ATOMIC);
   var i = a.valueToCode(l, "ldp_nya", javascript.Order.ATOMIC);
-  var j = "mainPurchase(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + m + ",\"t\",0,0,0," + i + ",0,0,0,0,0,0,0,0);";
+  var j = "hd(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + m + ",\"t\",0,0,0," + i + ",0,0,0,0,0,0,0,0);";
   return j;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -3683,7 +3683,7 @@ javascript.javascriptGenerator.forBlock.purchase_over_under = function (l, a) {
   ;
   var m = a.valueToCode(l, "inpduration_nya", javascript.Order.ATOMIC);
   var i = a.valueToCode(l, "ldp_nya", javascript.Order.ATOMIC);
-  var j = "mainPurchase(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + m + ",\"t\",0,0,0,0," + i + "," + i + ",0,0,0,0,0,0);";
+  var j = "hd(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + m + ",\"t\",0,0,0,0," + i + "," + i + ",0,0,0,0,0,0);";
   return j;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -3737,7 +3737,7 @@ javascript.javascriptGenerator.forBlock.purchase_even_odd = function (k, a) {
   }
   ;
   var l = a.valueToCode(k, "inpduration_nya", javascript.Order.ATOMIC);
-  var i = "mainPurchase(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + l + ",\"t\",0,0,0,0,0,0,0,0,0,0,0,0);";
+  var i = "hd(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + l + ",\"t\",0,0,0,0,0,0,0,0,0,0,0,0);";
   return i;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -3796,7 +3796,7 @@ javascript.javascriptGenerator.forBlock.purchase_rise_fall = function (l, a) {
   ;
   var m = l.getFieldValue("seldurationunit_nya");
   var i = a.valueToCode(l, "inpduration_nya", javascript.Order.ATOMIC);
-  var j = "mainPurchase(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + i + ",\"" + m + "\",\"+0\",0,0,0,0,0,0,0,0,0,0,0);";
+  var j = "hd(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + i + ",\"" + m + "\",\"+0\",0,0,0,0,0,0,0,0,0,0,0);";
   return j;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -3859,7 +3859,7 @@ javascript.javascriptGenerator.forBlock.purchase_higher_lower = function (m, a) 
   var n = m.getFieldValue("seldurationunit_nya");
   var i = a.valueToCode(m, "inpduration_nya", javascript.Order.ATOMIC);
   var j = a.valueToCode(m, "barrier_nya", javascript.Order.ATOMIC);
-  var k = "mainPurchase(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + i + ",\"" + n + "\"," + j + ",0,0,0,0,0,0,0,0,0,0,0);";
+  var k = "hd(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + i + ",\"" + n + "\"," + j + ",0,0,0,0,0,0,0,0,0,0,0);";
   return k;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -3922,7 +3922,7 @@ javascript.javascriptGenerator.forBlock.purchase_touch_notouch = function (m, a)
   var n = m.getFieldValue("seldurationunit_nya");
   var i = a.valueToCode(m, "inpduration_nya", javascript.Order.ATOMIC);
   var j = a.valueToCode(m, "barrier_nya", javascript.Order.ATOMIC);
-  var k = "mainPurchase(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + i + ",\"" + n + "\"," + j + ",0,0,0,0,0,0,0,0,0,0,0);";
+  var k = "hd(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + i + ",\"" + n + "\"," + j + ",0,0,0,0,0,0,0,0,0,0,0);";
   return k;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -3989,7 +3989,7 @@ javascript.javascriptGenerator.forBlock.purchase_endsbetween_endsoutside = funct
   var i = a.valueToCode(n, "inpduration_nya", javascript.Order.ATOMIC);
   var j = a.valueToCode(n, "highbarrier_nya", javascript.Order.ATOMIC);
   var k = a.valueToCode(n, "lowbarrier_nya", javascript.Order.ATOMIC);
-  var l = "mainPurchase(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + i + ",\"" + o + "\",0," + j + "," + k + ",0,0,0,0,0,0,0,0,0);";
+  var l = "hd(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + i + ",\"" + o + "\",0," + j + "," + k + ",0,0,0,0,0,0,0,0,0);";
   return l;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -4056,7 +4056,7 @@ javascript.javascriptGenerator.forBlock.purchase_staysbetween_goesoutside = func
   var i = a.valueToCode(n, "inpduration_nya", javascript.Order.ATOMIC);
   var j = a.valueToCode(n, "highbarrier_nya", javascript.Order.ATOMIC);
   var k = a.valueToCode(n, "lowbarrier_nya", javascript.Order.ATOMIC);
-  var l = "mainPurchase(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + i + ",\"" + o + "\",0," + j + "," + k + ",0,0,0,0,0,0,0,0,0);";
+  var l = "hd(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + i + ",\"" + o + "\",0," + j + "," + k + ",0,0,0,0,0,0,0,0,0);";
   return l;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -4110,7 +4110,7 @@ javascript.javascriptGenerator.forBlock.purchase_asianup_asiandown = function (k
   }
   ;
   var l = a.valueToCode(k, "inpduration_nya", javascript.Order.ATOMIC);
-  var i = "mainPurchase(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + l + ",\"t\",0,0,0,0,0,0,0,0,0,0,0,0);";
+  var i = "hd(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + l + ",\"t\",0,0,0,0,0,0,0,0,0,0,0,0);";
   return i;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -4168,7 +4168,7 @@ javascript.javascriptGenerator.forBlock.purchase_highclose_closelow_highlow = fu
   ;
   var m = a.valueToCode(l, "inpduration_nya", javascript.Order.ATOMIC);
   var i = a.valueToCode(l, "multiplier_nya", javascript.Order.ATOMIC);
-  var j = "mainPurchase(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + m + ",\"m\",0,0,0,0,0,0," + i + ",0,0,0,0,0);";
+  var j = "hd(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + m + ",\"m\",0,0,0,0,0,0," + i + ",0,0,0,0,0);";
   return j;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -4227,7 +4227,7 @@ javascript.javascriptGenerator.forBlock.purchase_resetcall_resetput = function (
   ;
   var m = l.getFieldValue("seldurationunit_nya");
   var i = a.valueToCode(l, "inpduration_nya", javascript.Order.ATOMIC);
-  var j = "mainPurchase(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + i + ",\"" + m + "\",0,0,0,0,0,0,0,0,0,0,0,0);";
+  var j = "hd(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + i + ",\"" + m + "\",0,0,0,0,0,0,0,0,0,0,0,0);";
   return j;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -4283,7 +4283,7 @@ javascript.javascriptGenerator.forBlock.purchase_hightick_lowtick = function (k,
   }
   ;
   var l = a.valueToCode(k, "tickprediction_nya", javascript.Order.ATOMIC);
-  var i = "mainPurchase(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + ",5,\"t\",0,0,0,0,0,0,0," + l + ",0,0,0,0);";
+  var i = "hd(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + ",5,\"t\",0,0,0,0,0,0,0," + l + ",0,0,0,0);";
   return i;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -4337,7 +4337,7 @@ javascript.javascriptGenerator.forBlock.purchase_onlyups_onlydowns = function (k
   }
   ;
   var l = a.valueToCode(k, "inpduration_nya", javascript.Order.ATOMIC);
-  var i = "mainPurchase(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + l + ",\"t\",0,0,0,0,0,0,0,0,0,0,0,0);";
+  var i = "hd(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + l + ",\"t\",0,0,0,0,0,0,0,0,0,0,0,0);";
   return i;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -4395,7 +4395,7 @@ javascript.javascriptGenerator.forBlock.purchase_accumulatorup = function (l, a)
   ;
   var m = a.valueToCode(l, "selaccumulate_nya", javascript.Order.ATOMIC);
   var i = a.valueToCode(l, "limittp_nya", javascript.Order.ATOMIC);
-  var j = "mainPurchase(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + ",100,\"t\",0,0,0,0,0,0,0,0," + m + ",0," + i + ",0);";
+  var j = "hd(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + ",100,\"t\",0,0,0,0,0,0,0,0," + m + ",0," + i + ",0);";
   return j;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -4460,7 +4460,7 @@ javascript.javascriptGenerator.forBlock.purchase_multiplyup_multiplydown = funct
   var n = m.getFieldValue("selmultipliermultiply_nya");
   var i = a.valueToCode(m, "limittp_nya", javascript.Order.ATOMIC);
   var j = a.valueToCode(m, "limitsl_nya", javascript.Order.ATOMIC);
-  var k = "mainPurchase(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + ",0,\"t\",0,0,0,0,0,0,0,0,0,\"" + n + "\"," + i + "," + j + ");";
+  var k = "hd(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + ",0,\"t\",0,0,0,0,0,0,0,0,0,\"" + n + "\"," + i + "," + j + ");";
   return k;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -4523,7 +4523,7 @@ javascript.javascriptGenerator.forBlock.purchase_vanillalongcall_vanillalongput 
   var n = m.getFieldValue("seldurationunit_nya");
   var i = a.valueToCode(m, "inpduration_nya", javascript.Order.ATOMIC);
   var j = a.valueToCode(m, "barrier_nya", javascript.Order.ATOMIC);
-  var k = "mainPurchase(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + i + ",\"" + n + "\"," + j + ",0,0,0,0,0,0,0,0,0,0,0);";
+  var k = "hd(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + i + ",\"" + n + "\"," + j + ",0,0,0,0,0,0,0,0,0,0,0);";
   return k;
 };
 Blockly.defineBlocksWithJsonArray([{
@@ -4586,7 +4586,7 @@ javascript.javascriptGenerator.forBlock.purchase_turboslong_turbosshort = functi
   var n = m.getFieldValue("seldurationunit_nya");
   var i = a.valueToCode(m, "inpduration_nya", javascript.Order.ATOMIC);
   var j = a.valueToCode(m, "barrier_nya", javascript.Order.ATOMIC);
-  var k = "mainPurchase(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + i + ",\"" + n + "\"," + j + ",0,0,0,0,0,0,0,0,0,0,0);";
+  var k = "hd(\"" + e + "\",\"" + f + "\"," + g + ",\"" + b + "\"," + d + "," + i + ",\"" + n + "\"," + j + ",0,0,0,0,0,0,0,0,0,0,0);";
   return k;
 };
 Blockly.defineBlocksWithJsonArray([{
