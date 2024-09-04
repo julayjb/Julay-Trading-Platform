@@ -1727,7 +1727,7 @@ const Oc = (i, y, a, b) => {
     }
   }
   if (b == "history") {
-     = false;
+    xe = false;
   }
   ;
   Rc();
@@ -1744,7 +1744,7 @@ const Pc = (h, a, b, c, d) => {
     document.getElementById("continuousindices_" + h + "_digits").value = b;
   }
   if (d == "history") {
-     = false;
+    xe = false;
   }
   ;
   if (Date.now() - g[h] < 500) {
