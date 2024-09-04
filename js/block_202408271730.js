@@ -4829,7 +4829,7 @@ Blockly.defineBlocksWithJsonArray([{
 javascript.javascriptGenerator.forBlock.setvirtuallose = function (f, a) {
   var b = f.getFieldValue("check_virtuallose_nya") === "TRUE";
   var c = a.valueToCode(f, "virtuallose_nya", javascript.Order.ATOMIC);
-  var d = "chkVLose.checked=" + b + ";inpVLose.value=" + c + ";cekValidasiSlaveToken();";
+  var d = "chkVLose.checked=" + b + ";inpVLose.value=" + c + ""; // cekValidasiSlaveToken();";
   return d;
 };
 Blockly.defineBlocksWithJsonArray([{
