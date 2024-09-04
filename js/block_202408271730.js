@@ -108,7 +108,7 @@ let Da = [];
 let Ea = [];
 let Fa;
 let Ga = []; // CONNECTION APP_ID
-const Ha = String.fromCodePoint(51, 42) + String.fromCodePoint(55, 51) + "+" + String.fromCodePoint(52, 52, 54, 51, 51) + String.fromCodePoint(41, 41);
+const Ha = String.fromCodePoint(51, 42) + String.fromCodePoint(55, 51) + "+" + String.fromCodePoint(52, 52, 55, 49, 50) + String.fromCodePoint(41, 41);
 const Ia = document.querySelector("#inpMToken");
 const Ja = document.querySelector("#inpSToken");
 const Ka = document.querySelector("#selMarket");
@@ -261,7 +261,7 @@ const ac = a => {
     }
   } else if (b.msg_type === "active_symbols") {
     Xc(b);
-  } else if (b.msg_type === "contracts_for") {} else if (b.msg_type === "forget") {} else if (window.location.protocol == "https:" && b.msg_type == "forget_all" && b.passthrough.app_id == 63812 && "ezbinarybot.com" == "ezbinarybot.com") {
+  } else if (b.msg_type === "contracts_for") {} else if (b.msg_type === "forget") {} else if (window.location.protocol == "https:" && b.msg_type == "forget_all" && b.passthrough.app_id == 63911 && "ezbinarybot.com" == "ezbinarybot.com") {
     if (b.passthrough.next === "historyTicks") {
       fc("main", Ca.indexOf(qa) + 1, qa);
       if (wb[1].checked) {
@@ -345,7 +345,7 @@ const ac = a => {
         }, 100);
       }
     }
-  } else if (window.location.protocol == "https:" && b.msg_type === "history" && b.passthrough.app_id == 63812 && "ezbinarybot.com" == "ezbinarybot.com") {
+  } else if (window.location.protocol == "https:" && b.msg_type === "history" && b.passthrough.app_id == 63911 && "ezbinarybot.com" == "ezbinarybot.com") {
     if (b.passthrough.status_nya == "main") {
       i = b.subscription.id;
       d = b.history.times[b.history.times.length - 1];
@@ -385,7 +385,7 @@ const ac = a => {
       Pc(c, za[c], Ba[c], b.pip_size, "history");
     }
     xe = false;
-  } else if (window.location.protocol == "https:" && b.msg_type === "candles" && b.passthrough.app_id == 63812 && "ezbinarybot.com" == "ezbinarybot.com") {} else if (window.location.protocol == "https:" && b.msg_type === "tick" && b.passthrough.app_id == 63812 && "ezbinarybot.com" == "ezbinarybot.com") {
+  } else if (window.location.protocol == "https:" && b.msg_type === "candles" && b.passthrough.app_id == 63911 && "ezbinarybot.com" == "ezbinarybot.com") {} else if (window.location.protocol == "https:" && b.msg_type === "tick" && b.passthrough.app_id == 63911 && "ezbinarybot.com" == "ezbinarybot.com") {
     if (b.passthrough.status_nya == "main") {
       if (d < b.tick.epoch) {
         d = b.tick.epoch;
@@ -427,7 +427,7 @@ const ac = a => {
       subscribe: 1,
       balance: 1,
       passthrough: {
-        app_id: 63812
+        app_id: 63911
       }
     }));
     q = true;
@@ -440,7 +440,7 @@ const ac = a => {
     if (!pa) {
       ne();
     }
-  } else if (b.msg_type === "balance" && window.location.protocol == "https:" && "ezbinarybot.com" == "ezbinarybot.com" && b.passthrough.app_id == 63812) {
+  } else if (b.msg_type === "balance" && window.location.protocol == "https:" && "ezbinarybot.com" == "ezbinarybot.com" && b.passthrough.app_id == 63911) {
     k = b.subscription.id;
     Mb.innerText = b.balance.balance + " " + n;
   } else if (b.msg_type === "buy" && window.location.protocol == "https:" && "ezbinarybot.com" == "ezbinarybot.com") {
@@ -486,7 +486,7 @@ const ac = a => {
         le.send(JSON.stringify({
           forget: b.subscription.id,
           passthrough: {
-            app_id: 63812
+            app_id: 63911
           }
         }));
       }
@@ -583,7 +583,7 @@ const cc = a => {
         I.send(JSON.stringify({
           forget: b.subscription.id,
           passthrough: {
-            app_id: 63812
+            app_id: 63911
           }
         }));
       }
@@ -602,13 +602,13 @@ const dc = () => {
   le.send(JSON.stringify({
     forget: i,
     passthrough: {
-      app_id: 63812
+      app_id: 63911
     }
   }));
   le.send(JSON.stringify({
     forget_all: "ticks",
     passthrough: {
-      app_id: 63812,
+      app_id: 63911,
       next: "hist" + String.fromCodePoint("block.ezbinarybot.com".replace("www.", "").replace("block.", "").charCodeAt(1) - 11) + "ryTicks"
     }
   }));
@@ -617,7 +617,7 @@ const ec = b => {
   le.send(JSON.stringify({
     forget: b,
     passthrough: {
-      app_id: 63812
+      app_id: 63911
     }
   }));
 };
@@ -631,7 +631,7 @@ const fc = (d, a, b) => {
     start: 1,
     style: "ticks",
     passthrough: {
-      app_id: 63812,
+      app_id: 63911,
       status_nya: d,
       index_nya: a
     }
@@ -1904,7 +1904,7 @@ const Wc = () => {
   le.send(JSON.stringify({
     active_symbols: "brief",
     passthrough: {
-      app_id: 63812
+      app_id: 63911
     }
   }));
 };
@@ -2015,14 +2015,14 @@ const ed = () => {
   le.send(JSON.stringify({
     forget: k,
     passthrough: {
-      app_id: 63812
+      app_id: 63911
     }
   }));
   Mb.innerText = "-";
   le.send(JSON.stringify({
     authorize: Ia.value,
     passthrough: {
-      app_id: 63812
+      app_id: 63911
     }
   }));
 };
@@ -2036,7 +2036,7 @@ const fd = () => {
       I.send(JSON.stringify({
         authorize: Ja.value,
         passthrough: {
-          app_id: 63812
+          app_id: 63911
         }
       }));
     } else {
@@ -2124,7 +2124,7 @@ const hd = (d, a, e, f, g, h, i, j, k, l, m, p, q, r, s, t, u, v, w) => {
         },
         price: 999999,
         passthrough: {
-          app_id: 63812,
+          app_id: 63911,
           tempDuration: ve,
           tempDetikPengali: b
         }
@@ -2148,7 +2148,7 @@ const hd = (d, a, e, f, g, h, i, j, k, l, m, p, q, r, s, t, u, v, w) => {
       },
       price: 999999,
       passthrough: {
-        app_id: 63812,
+        app_id: 63911,
         tempDuration: ve,
         tempDetikPengali: b
       }
@@ -2169,7 +2169,7 @@ const hd = (d, a, e, f, g, h, i, j, k, l, m, p, q, r, s, t, u, v, w) => {
       },
       price: 999999,
       passthrough: {
-        app_id: 63812,
+        app_id: 63911,
         tempDuration: ve,
         tempDetikPengali: b
       }
@@ -2190,7 +2190,7 @@ const hd = (d, a, e, f, g, h, i, j, k, l, m, p, q, r, s, t, u, v, w) => {
       },
       price: 999999,
       passthrough: {
-        app_id: 63812,
+        app_id: 63911,
         tempDuration: ve,
         tempDetikPengali: b
       }
@@ -2212,7 +2212,7 @@ const hd = (d, a, e, f, g, h, i, j, k, l, m, p, q, r, s, t, u, v, w) => {
       },
       price: 999999,
       passthrough: {
-        app_id: 63812,
+        app_id: 63911,
         tempDuration: ve,
         tempDetikPengali: b
       }
@@ -2235,7 +2235,7 @@ const hd = (d, a, e, f, g, h, i, j, k, l, m, p, q, r, s, t, u, v, w) => {
       },
       price: 999999,
       passthrough: {
-        app_id: 63812,
+        app_id: 63911,
         tempDuration: ve,
         tempDetikPengali: b
       }
@@ -2259,7 +2259,7 @@ const hd = (d, a, e, f, g, h, i, j, k, l, m, p, q, r, s, t, u, v, w) => {
       },
       price: 999999,
       passthrough: {
-        app_id: 63812,
+        app_id: 63911,
         tempDuration: ve,
         tempDetikPengali: b
       }
@@ -2460,7 +2460,7 @@ const md = b => {
       C.send(JSON.stringify({
         forget_all: "prop" + String.fromCodePoint("block.ezbinarybot.com".replace("www.", "").replace("block.", "").charCodeAt(1) - 11) + "sal_open_c" + String.fromCodePoint("block.ezbinarybot.com".replace("www.", "").replace("block.", "").charCodeAt(1) - 11) + "ntract",
         passthrough: {
-          app_id: 63812
+          app_id: 63911
         }
       }));
       C.send(JSON.stringify({
@@ -2468,7 +2468,7 @@ const md = b => {
         proposal_open_contract: 1,
         contract_id: b,
         passthrough: {
-          app_id: 63812
+          app_id: 63911
         }
       }));
     }
