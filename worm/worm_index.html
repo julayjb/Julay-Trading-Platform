@@ -1,0 +1,1038 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>EZ WORM - ezbinarybot.com</title>
+<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
+<style type="text/css">
+body, html {
+  height: 98%;
+  width: 99%;
+}
+body,td,th {
+	font-family: "Times New Roman", Times, serif;
+	color: #FFF;
+}
+body {
+	background-color: #000;
+	background-image: url(image/mood001.jpg);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+</style>
+<link href="css/ezworm_202009231415.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table width="100%"><tr>
+  <td>
+<table align="center" border="0" bordercolor="#DDDDDD">
+    <tr>
+      <th width="2" height="1" align="left" valign="middle" style="border:hidden; border-radius:15px;" scope="col"><table width="100%" border="0" align="center">
+        <tr align="center" valign="middle">
+          <th colspan="11" scope="col"><select class="select-css" onchange="document.getElementById('lblPrice').innerHTML=''; bj();" name="ezrf_v1" size="1" id="ezrf_v1">
+          	<option style="background-color:#333; color:#FFF" disabled>CONTINUOUS INDICES :</option>
+            <option value="1HZ10V">Vol 10(1s)</option>
+            <option value="R_10" selected="selected">Vol 10</option>
+            <option value="1HZ25V">Vol 25(1s)</option>
+            <option value="R_25">Vol 25</option>
+            <option value="1HZ50V">Vol 50(1s)</option>
+            <option value="R_50">Vol 50</option>
+            <option value="1HZ75V">Vol 75(1s)</option>
+            <option value="R_75">Vol 75</option>
+            <option value="1HZ100V">Vol 100(1s)</option>
+            <option value="R_100">Vol 100</option>
+            <option style="background-color:#333; color:#FFF" disabled>DAILY RESET INDICES :</option>
+            <option value="RDBEAR">Bear Market</option>
+            <option value="RDBULL">Bull Market</option>
+            <option style="background-color:#333; color:#FFF" disabled>JUMP INDICES :</option>
+            <option value="JD10">Jump 10</option>
+            <option value="JD25">Jump 25</option>
+            <option value="JD50">Jump 50</option>
+            <option value="JD75">Jump 75</option>
+            <option value="JD100">Jump 100</option>
+            <option style="background-color:#333; color:#FFF" disabled>FOREX MAJOR PAIRS :</option>
+            <option value="frxAUDJPY">AUD/JPY</option>
+            <option value="frxAUDUSD">AUD/USD</option>
+            <option value="frxEURAUD">EUR/AUD</option>
+            <option value="frxEURCAD">EUR/CAD</option>
+            <option value="frxEURCHF">EUR/CHF</option>
+            <option value="frxEURGBP">EUR/GBP</option>
+            <option value="frxEURJPY">EUR/JPY</option>
+            <option value="frxEURUSD">EUR/USD</option>
+            <option value="frxGBPAUD">GBP/AUD</option>
+            <option value="frxGBPJPY">GBP/JPY</option>
+            <option value="frxGBPUSD">GBP/USD</option>
+            <option value="frxUSDCAD">USD/CAD</option>
+            <option value="frxUSDCHF">USD/CHF</option>
+            <option value="frxUSDJPY">USD/JPY</option>
+            <option style="background-color:#333; color:#FFF" disabled>FOREX MINOR PAIRS :</option>
+            <option value="frxAUDCAD">AUD/CAD</option>
+            <option value="frxAUDCHF">AUD/CHF</option>
+            <option value="frxAUDNZD">AUD/NZD</option>
+            <option value="frxEURNZD">EUR/NZD</option>
+            <option value="frxGBPCAD">GBP/CAD</option>
+            <option value="frxGBPCHF">GBP/CHF</option>
+            <option value="frxGBPNOK">GBP/NOK</option>
+            <option value="frxGBPNZD">GBP/NZD</option>
+            <option value="frxNZDJPY">NZD/JPY</option>
+            <option value="frxNZDUSD">NZD/USD</option>
+            <option value="frxUSDMXN">USD/MXN</option>
+            <option value="frxUSDNOK">USD/NOK</option>
+            <option value="frxUSDPLN">USD/PLN</option>
+            <option value="frxUSDSEK">USD/SEK</option>
+            <option style="background-color:#333; color:#FFF" disabled>FOREX SMART FX :</option>
+            <option value="WLDAUD">AUD Index</option>
+            <option value="WLDEUR">EUR Index</option>
+            <option value="WLDGBP">GBP Index</option>
+            <option value="WLDUSD">USD Index</option>
+            <option style="background-color:#333; color:#FFF" disabled>INDICES ASIA/OCEANIA :</option>
+            <option value="OTC_AS51">Australian Index</option>
+            <option value="OTC_HSI">Hong Kong Index</option>
+            <option value="OTC_N225">Japanese Index</option>
+            <option style="background-color:#333; color:#FFF" disabled>INDICES EUROPE :</option>
+            <option value="OTC_AEX">Dutch Index</option>
+            <option value="OTC_SX5E">Euro 50 Index</option>
+            <option value="OTC_FCHI">French Index</option>
+            <option value="OTC_GDAXI">German Index</option>
+            <option value="OTC_SSMI">Swiss Index</option>
+            <option value="OTC_FTSE">UK Index</option>
+            <option style="background-color:#333; color:#FFF" disabled>INDICES AMERICAS :</option>
+            <option value="OTC_SPC">US Index</option>
+            <option value="OTC_NDX">US Tech Index</option>
+            <option value="OTC_DJI">Wall Street Index</option>
+            <option style="background-color:#333; color:#FFF" disabled>COMMODITIES METALS :</option>
+            <option value="frxXAUUSD">Gold/USD</option>
+            <option value="frxXPDUSD">Palladium/USD</option>
+            <option value="frxXPTUSD">Platinum/USD</option>
+            <option value="frxXAGUSD">Silver/USD</option>
+            <option style="background-color:#333; color:#FFF" disabled>COMMODITIES ENERGY :</option>
+            <option value="frxBROUSD">Oil/USD</option>
+            </select>&nbsp;&nbsp;<label class="buttonPriceEq" id="lblPrice"></label> Random after<div class="tooltip"><img src="image/tooltips.png" width="20" height="20" alt="?" />
+  <span class="tooltiptext">Special For VOLATILITY MARKET only.</span>
+</div>: <input type="checkbox" id="checkRandMarkAftWin" style="transform:scale(1.5)"/><label for="checkRandMarkAftWin">Win</label> | <input type="checkbox" id="checkRandMarkAftLoss" style="transform:scale(1.5)"/><label for="checkRandMarkAftLoss">Loss</label></th>
+          <th scope="col">&nbsp;</th>
+          <th width="75" scope="col">&nbsp;</th>
+          <th width="75" scope="col">&nbsp;</th>
+          </tr>
+        <tr align="center" valign="middle">
+          <th width="10" scope="row">&nbsp;</th>
+          <th width="200" height="10" scope="row"><input id="L1^1" class="buttonDataEq" type="button" value="x" onclick="initStake=document.getElementById('txtStake').value;bi('DIGITDIFF',this.value)"/></th>
+          <td><input id="L1^2" class="buttonDataEq" type="button" value="x" onclick="initStake=document.getElementById('txtStake').value;bi('DIGITDIFF',this.value)"/></td>
+          <td><input id="L1^3" class="buttonDataEq" type="button" value="x" onclick="initStake=document.getElementById('txtStake').value;bi('DIGITDIFF',this.value)"/></td>
+          <td><input id="L1^4" class="buttonDataEq" type="button" value="x" onclick="initStake=document.getElementById('txtStake').value;bi('DIGITDIFF',this.value)"/></td>
+          <td><input id="L1^5" class="buttonDataEq" type="button" value="x" onclick="initStake=document.getElementById('txtStake').value;bi('DIGITDIFF',this.value)"/></td>
+          <td><input id="L1^6" class="buttonDataEq" type="button" value="x" onclick="initStake=document.getElementById('txtStake').value;bi('DIGITDIFF',this.value)"/></td>
+          <td><input id="L1^7" class="buttonDataEq" type="button" value="x" onclick="initStake=document.getElementById('txtStake').value;bi('DIGITDIFF',this.value)"/></td>
+          <td><input id="L1^8" class="buttonDataEq" type="button" value="x" onclick="initStake=document.getElementById('txtStake').value;bi('DIGITDIFF',this.value)"/></td>
+          <td><input id="L1^9" class="buttonDataEq" type="button" value="x" onclick="initStake=document.getElementById('txtStake').value;bi('DIGITDIFF',this.value)"/></td>
+          <td><input id="L1^10" class="buttonDataEq" type="button" value="x" style="width:90px; height:90px; font-size:60px; padding:0px;" onclick="initStake=document.getElementById('txtStake').value;bi('DIGITDIFF',this.value)"/></td>
+          <td width="1">&nbsp;</td>
+          <td width="75"><a id="btnCall" class="buttonCall" href="#" onclick="initStake=document.getElementById('txtStake').value;bh(this.id);">CALL</a><br /><br /><a id="btnPut" class="buttonPut" href="#" onclick="initStake=document.getElementById('txtStake').value;bh(this.id);">PUT</a></td>
+          <td width="75">&nbsp;</td>
+          </tr>
+        <tr align="center" valign="middle">
+          <th height="10" colspan="2" align="left" scope="row"><font color="#FFFF00">AUTO TRADE |</font></th>
+          <td colspan="9" align="left"><font color="#FFFF00">PRESET:</font> 
+            <select onchange="ab(this.value);" class="select-css2any" style="width:100px;" size="1" name="selPreset" id="selPreset">
+              <option value="none" selected="selected">None</option>
+              <option style="background-color:#333; color:#FFF" disabled>BROWSE :</option>
+              <option value="browse">Browse...</option>
+              <option style="background-color:#333; color:#FFF" disabled>DIGIT DIFFER :</option>
+              <option value="ddTw">Twin</option>
+              <option value="ddTw1">Twin Skip 1</option>
+              <option value="ddTw2">Twin Skip 2</option>
+              <option value="ddTw3">Twin Skip 3</option>
+              <option value="ddTtw">Triple Twin</option>
+              <option value="ddTtw1">Triple Twin Skip 1</option>
+              <option value="ddTtw2">Triple Twin Skip 2</option>
+              <option value="ddTtw3">Triple Twin Skip 3</option>
+              <option value="ddxyx">X.Y.X</option>
+              <option value="ddxyxyx">X.Y.X.Y.X</option>
+              </select>
+            <input hidden="hidden" type="file" name="btnLoadPre" id="btnLoadPre" style="width:200px; border-radius:10px;" accept=".ezp" onchange="ld(event);"/> <input type="button" name="btnSavePre" id="btnSavePre" value="Save Preset" onclick="bo();" style="width:90px; height:25px; border-radius:8px"/> <input type="button" name="btnClearPre" id="btnClearPre" value="Clear Preset" style="width:90px; height:25px; border-radius:8px" onclick="bn();"/> <label id="lblPreShow"></label></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr align="center" valign="middle">
+          <th height="0" align="right" scope="row">Digit:</th>
+          <th height="0" scope="row"><select class="select-css2any" size="1" name="dig^1" id="dig^1">
+            <option value="any^any">any</option>
+            <option value="=^0">= 0</option>
+            <option value="=^1">= 1</option>
+            <option value="=^2">= 2</option>
+            <option value="=^3">= 3</option>
+            <option value="=^4">= 4</option>
+            <option value="=^5">= 5</option>
+            <option value="=^6">= 6</option>
+            <option value="=^7">= 7</option>
+            <option value="=^8">= 8</option>
+            <option value="=^9">= 9</option>
+            <option value="x^x">= X</option>
+            <option value="xeven^xeven">= X Even</option>
+            <option value="xodd^xodd">= X Odd</option>
+            <option value="y^y">= Y</option>
+            <option value="not^0">not 0</option>
+            <option value="not^1">not 1</option>
+            <option value="not^2">not 2</option>
+            <option value="not^3">not 3</option>
+            <option value="not^4">not 4</option>
+            <option value="not^5">not 5</option>
+            <option value="not^6">not 6</option>
+            <option value="not^7">not 7</option>
+            <option value="not^8">not 8</option>
+            <option value="not^9">not 9</option>
+            <option value="ov^0">OVER 0</option>
+            <option value="ov^1">OVER 1</option>
+            <option value="ov^2">OVER 2</option>
+            <option value="ov^3">OVER 3</option>
+            <option value="ov^4">OVER 4</option>
+            <option value="ov^5">OVER 5</option>
+            <option value="ov^6">OVER 6</option>
+            <option value="ov^7">OVER 7</option>
+            <option value="ov^8">OVER 8</option>
+            <option value="un^1">UNDER 1</option>
+            <option value="un^2">UNDER 2</option>
+            <option value="un^3">UNDER 3</option>
+            <option value="un^4">UNDER 4</option>
+            <option value="un^5">UNDER 5</option>
+            <option value="un^6">UNDER 6</option>
+            <option value="un^7">UNDER 7</option>
+            <option value="un^8">UNDER 8</option>
+            <option value="un^9">UNDER 9</option>
+            <option value="even^even">EVEN</option>
+            <option value="odd^odd">ODD</option>
+          </select></th>
+          <th height="0" scope="row"><select class="select-css2any" size="1" name="dig^2" id="dig^2">
+            <option value="any^any">any</option>
+            <option value="=^0">= 0</option>
+            <option value="=^1">= 1</option>
+            <option value="=^2">= 2</option>
+            <option value="=^3">= 3</option>
+            <option value="=^4">= 4</option>
+            <option value="=^5">= 5</option>
+            <option value="=^6">= 6</option>
+            <option value="=^7">= 7</option>
+            <option value="=^8">= 8</option>
+            <option value="=^9">= 9</option>
+            <option value="x^x">= X</option>
+            <option value="xeven^xeven">= X Even</option>
+            <option value="xodd^xodd">= X Odd</option>
+            <option value="y^y">= Y</option>
+            <option value="not^0">not 0</option>
+            <option value="not^1">not 1</option>
+            <option value="not^2">not 2</option>
+            <option value="not^3">not 3</option>
+            <option value="not^4">not 4</option>
+            <option value="not^5">not 5</option>
+            <option value="not^6">not 6</option>
+            <option value="not^7">not 7</option>
+            <option value="not^8">not 8</option>
+            <option value="not^9">not 9</option>
+            <option value="ov^0">OVER 0</option>
+            <option value="ov^1">OVER 1</option>
+            <option value="ov^2">OVER 2</option>
+            <option value="ov^3">OVER 3</option>
+            <option value="ov^4">OVER 4</option>
+            <option value="ov^5">OVER 5</option>
+            <option value="ov^6">OVER 6</option>
+            <option value="ov^7">OVER 7</option>
+            <option value="ov^8">OVER 8</option>
+            <option value="un^1">UNDER 1</option>
+            <option value="un^2">UNDER 2</option>
+            <option value="un^3">UNDER 3</option>
+            <option value="un^4">UNDER 4</option>
+            <option value="un^5">UNDER 5</option>
+            <option value="un^6">UNDER 6</option>
+            <option value="un^7">UNDER 7</option>
+            <option value="un^8">UNDER 8</option>
+            <option value="un^9">UNDER 9</option>
+            <option value="even^even">EVEN</option>
+            <option value="odd^odd">ODD</option>
+          </select></th>
+          <th height="0" scope="row"><select class="select-css2any" size="1" name="dig^3" id="dig^3">
+            <option value="any^any">any</option>
+            <option value="=^0">= 0</option>
+            <option value="=^1">= 1</option>
+            <option value="=^2">= 2</option>
+            <option value="=^3">= 3</option>
+            <option value="=^4">= 4</option>
+            <option value="=^5">= 5</option>
+            <option value="=^6">= 6</option>
+            <option value="=^7">= 7</option>
+            <option value="=^8">= 8</option>
+            <option value="=^9">= 9</option>
+            <option value="x^x">= X</option>
+            <option value="xeven^xeven">= X Even</option>
+            <option value="xodd^xodd">= X Odd</option>
+            <option value="y^y">= Y</option>
+            <option value="not^0">not 0</option>
+            <option value="not^1">not 1</option>
+            <option value="not^2">not 2</option>
+            <option value="not^3">not 3</option>
+            <option value="not^4">not 4</option>
+            <option value="not^5">not 5</option>
+            <option value="not^6">not 6</option>
+            <option value="not^7">not 7</option>
+            <option value="not^8">not 8</option>
+            <option value="not^9">not 9</option>
+            <option value="ov^0">OVER 0</option>
+            <option value="ov^1">OVER 1</option>
+            <option value="ov^2">OVER 2</option>
+            <option value="ov^3">OVER 3</option>
+            <option value="ov^4">OVER 4</option>
+            <option value="ov^5">OVER 5</option>
+            <option value="ov^6">OVER 6</option>
+            <option value="ov^7">OVER 7</option>
+            <option value="ov^8">OVER 8</option>
+            <option value="un^1">UNDER 1</option>
+            <option value="un^2">UNDER 2</option>
+            <option value="un^3">UNDER 3</option>
+            <option value="un^4">UNDER 4</option>
+            <option value="un^5">UNDER 5</option>
+            <option value="un^6">UNDER 6</option>
+            <option value="un^7">UNDER 7</option>
+            <option value="un^8">UNDER 8</option>
+            <option value="un^9">UNDER 9</option>
+            <option value="even^even">EVEN</option>
+            <option value="odd^odd">ODD</option>
+          </select></th>
+          <th height="0" scope="row"><select class="select-css2any" size="1" name="dig^4" id="dig^4">
+            <option value="any^any">any</option>
+            <option value="=^0">= 0</option>
+            <option value="=^1">= 1</option>
+            <option value="=^2">= 2</option>
+            <option value="=^3">= 3</option>
+            <option value="=^4">= 4</option>
+            <option value="=^5">= 5</option>
+            <option value="=^6">= 6</option>
+            <option value="=^7">= 7</option>
+            <option value="=^8">= 8</option>
+            <option value="=^9">= 9</option>
+            <option value="x^x">= X</option>
+            <option value="xeven^xeven">= X Even</option>
+            <option value="xodd^xodd">= X Odd</option>
+            <option value="y^y">= Y</option>
+            <option value="not^0">not 0</option>
+            <option value="not^1">not 1</option>
+            <option value="not^2">not 2</option>
+            <option value="not^3">not 3</option>
+            <option value="not^4">not 4</option>
+            <option value="not^5">not 5</option>
+            <option value="not^6">not 6</option>
+            <option value="not^7">not 7</option>
+            <option value="not^8">not 8</option>
+            <option value="not^9">not 9</option>
+            <option value="ov^0">OVER 0</option>
+            <option value="ov^1">OVER 1</option>
+            <option value="ov^2">OVER 2</option>
+            <option value="ov^3">OVER 3</option>
+            <option value="ov^4">OVER 4</option>
+            <option value="ov^5">OVER 5</option>
+            <option value="ov^6">OVER 6</option>
+            <option value="ov^7">OVER 7</option>
+            <option value="ov^8">OVER 8</option>
+            <option value="un^1">UNDER 1</option>
+            <option value="un^2">UNDER 2</option>
+            <option value="un^3">UNDER 3</option>
+            <option value="un^4">UNDER 4</option>
+            <option value="un^5">UNDER 5</option>
+            <option value="un^6">UNDER 6</option>
+            <option value="un^7">UNDER 7</option>
+            <option value="un^8">UNDER 8</option>
+            <option value="un^9">UNDER 9</option>
+            <option value="even^even">EVEN</option>
+            <option value="odd^odd">ODD</option>
+          </select></th>
+          <th height="0" scope="row"><select class="select-css2any" size="1" name="dig^5" id="dig^5">
+            <option value="any^any">any</option>
+            <option value="=^0">= 0</option>
+            <option value="=^1">= 1</option>
+            <option value="=^2">= 2</option>
+            <option value="=^3">= 3</option>
+            <option value="=^4">= 4</option>
+            <option value="=^5">= 5</option>
+            <option value="=^6">= 6</option>
+            <option value="=^7">= 7</option>
+            <option value="=^8">= 8</option>
+            <option value="=^9">= 9</option>
+            <option value="x^x">= X</option>
+            <option value="xeven^xeven">= X Even</option>
+            <option value="xodd^xodd">= X Odd</option>
+            <option value="y^y">= Y</option>
+            <option value="not^0">not 0</option>
+            <option value="not^1">not 1</option>
+            <option value="not^2">not 2</option>
+            <option value="not^3">not 3</option>
+            <option value="not^4">not 4</option>
+            <option value="not^5">not 5</option>
+            <option value="not^6">not 6</option>
+            <option value="not^7">not 7</option>
+            <option value="not^8">not 8</option>
+            <option value="not^9">not 9</option>
+            <option value="ov^0">OVER 0</option>
+            <option value="ov^1">OVER 1</option>
+            <option value="ov^2">OVER 2</option>
+            <option value="ov^3">OVER 3</option>
+            <option value="ov^4">OVER 4</option>
+            <option value="ov^5">OVER 5</option>
+            <option value="ov^6">OVER 6</option>
+            <option value="ov^7">OVER 7</option>
+            <option value="ov^8">OVER 8</option>
+            <option value="un^1">UNDER 1</option>
+            <option value="un^2">UNDER 2</option>
+            <option value="un^3">UNDER 3</option>
+            <option value="un^4">UNDER 4</option>
+            <option value="un^5">UNDER 5</option>
+            <option value="un^6">UNDER 6</option>
+            <option value="un^7">UNDER 7</option>
+            <option value="un^8">UNDER 8</option>
+            <option value="un^9">UNDER 9</option>
+            <option value="even^even">EVEN</option>
+            <option value="odd^odd">ODD</option>
+          </select></th>
+          <th height="0" scope="row"><select class="select-css2any" size="1" name="dig^6" id="dig^6">
+            <option value="any^any">any</option>
+            <option value="=^0">= 0</option>
+            <option value="=^1">= 1</option>
+            <option value="=^2">= 2</option>
+            <option value="=^3">= 3</option>
+            <option value="=^4">= 4</option>
+            <option value="=^5">= 5</option>
+            <option value="=^6">= 6</option>
+            <option value="=^7">= 7</option>
+            <option value="=^8">= 8</option>
+            <option value="=^9">= 9</option>
+            <option value="x^x">= X</option>
+            <option value="xeven^xeven">= X Even</option>
+            <option value="xodd^xodd">= X Odd</option>
+            <option value="y^y">= Y</option>
+            <option value="not^0">not 0</option>
+            <option value="not^1">not 1</option>
+            <option value="not^2">not 2</option>
+            <option value="not^3">not 3</option>
+            <option value="not^4">not 4</option>
+            <option value="not^5">not 5</option>
+            <option value="not^6">not 6</option>
+            <option value="not^7">not 7</option>
+            <option value="not^8">not 8</option>
+            <option value="not^9">not 9</option>
+            <option value="ov^0">OVER 0</option>
+            <option value="ov^1">OVER 1</option>
+            <option value="ov^2">OVER 2</option>
+            <option value="ov^3">OVER 3</option>
+            <option value="ov^4">OVER 4</option>
+            <option value="ov^5">OVER 5</option>
+            <option value="ov^6">OVER 6</option>
+            <option value="ov^7">OVER 7</option>
+            <option value="ov^8">OVER 8</option>
+            <option value="un^1">UNDER 1</option>
+            <option value="un^2">UNDER 2</option>
+            <option value="un^3">UNDER 3</option>
+            <option value="un^4">UNDER 4</option>
+            <option value="un^5">UNDER 5</option>
+            <option value="un^6">UNDER 6</option>
+            <option value="un^7">UNDER 7</option>
+            <option value="un^8">UNDER 8</option>
+            <option value="un^9">UNDER 9</option>
+            <option value="even^even">EVEN</option>
+            <option value="odd^odd">ODD</option>
+          </select></th>
+          <th height="0" scope="row"><select class="select-css2any" size="1" name="dig^7" id="dig^7">
+            <option value="any^any">any</option>
+            <option value="=^0">= 0</option>
+            <option value="=^1">= 1</option>
+            <option value="=^2">= 2</option>
+            <option value="=^3">= 3</option>
+            <option value="=^4">= 4</option>
+            <option value="=^5">= 5</option>
+            <option value="=^6">= 6</option>
+            <option value="=^7">= 7</option>
+            <option value="=^8">= 8</option>
+            <option value="=^9">= 9</option>
+            <option value="x^x">= X</option>
+            <option value="xeven^xeven">= X Even</option>
+            <option value="xodd^xodd">= X Odd</option>
+            <option value="y^y">= Y</option>
+            <option value="not^0">not 0</option>
+            <option value="not^1">not 1</option>
+            <option value="not^2">not 2</option>
+            <option value="not^3">not 3</option>
+            <option value="not^4">not 4</option>
+            <option value="not^5">not 5</option>
+            <option value="not^6">not 6</option>
+            <option value="not^7">not 7</option>
+            <option value="not^8">not 8</option>
+            <option value="not^9">not 9</option>
+            <option value="ov^0">OVER 0</option>
+            <option value="ov^1">OVER 1</option>
+            <option value="ov^2">OVER 2</option>
+            <option value="ov^3">OVER 3</option>
+            <option value="ov^4">OVER 4</option>
+            <option value="ov^5">OVER 5</option>
+            <option value="ov^6">OVER 6</option>
+            <option value="ov^7">OVER 7</option>
+            <option value="ov^8">OVER 8</option>
+            <option value="un^1">UNDER 1</option>
+            <option value="un^2">UNDER 2</option>
+            <option value="un^3">UNDER 3</option>
+            <option value="un^4">UNDER 4</option>
+            <option value="un^5">UNDER 5</option>
+            <option value="un^6">UNDER 6</option>
+            <option value="un^7">UNDER 7</option>
+            <option value="un^8">UNDER 8</option>
+            <option value="un^9">UNDER 9</option>
+            <option value="even^even">EVEN</option>
+            <option value="odd^odd">ODD</option>
+          </select></th>
+          <th height="0" scope="row"><select class="select-css2any" size="1" name="dig^8" id="dig^8">
+            <option value="any^any">any</option>
+            <option value="=^0">= 0</option>
+            <option value="=^1">= 1</option>
+            <option value="=^2">= 2</option>
+            <option value="=^3">= 3</option>
+            <option value="=^4">= 4</option>
+            <option value="=^5">= 5</option>
+            <option value="=^6">= 6</option>
+            <option value="=^7">= 7</option>
+            <option value="=^8">= 8</option>
+            <option value="=^9">= 9</option>
+            <option value="x^x">= X</option>
+            <option value="xeven^xeven">= X Even</option>
+            <option value="xodd^xodd">= X Odd</option>
+            <option value="y^y">= Y</option>
+            <option value="not^0">not 0</option>
+            <option value="not^1">not 1</option>
+            <option value="not^2">not 2</option>
+            <option value="not^3">not 3</option>
+            <option value="not^4">not 4</option>
+            <option value="not^5">not 5</option>
+            <option value="not^6">not 6</option>
+            <option value="not^7">not 7</option>
+            <option value="not^8">not 8</option>
+            <option value="not^9">not 9</option>
+            <option value="ov^0">OVER 0</option>
+            <option value="ov^1">OVER 1</option>
+            <option value="ov^2">OVER 2</option>
+            <option value="ov^3">OVER 3</option>
+            <option value="ov^4">OVER 4</option>
+            <option value="ov^5">OVER 5</option>
+            <option value="ov^6">OVER 6</option>
+            <option value="ov^7">OVER 7</option>
+            <option value="ov^8">OVER 8</option>
+            <option value="un^1">UNDER 1</option>
+            <option value="un^2">UNDER 2</option>
+            <option value="un^3">UNDER 3</option>
+            <option value="un^4">UNDER 4</option>
+            <option value="un^5">UNDER 5</option>
+            <option value="un^6">UNDER 6</option>
+            <option value="un^7">UNDER 7</option>
+            <option value="un^8">UNDER 8</option>
+            <option value="un^9">UNDER 9</option>
+            <option value="even^even">EVEN</option>
+            <option value="odd^odd">ODD</option>
+          </select></th>
+          <th height="0" scope="row"><select class="select-css2any" size="1" name="dig^9" id="dig^9">
+            <option value="any^any">any</option>
+            <option value="=^0">= 0</option>
+            <option value="=^1">= 1</option>
+            <option value="=^2">= 2</option>
+            <option value="=^3">= 3</option>
+            <option value="=^4">= 4</option>
+            <option value="=^5">= 5</option>
+            <option value="=^6">= 6</option>
+            <option value="=^7">= 7</option>
+            <option value="=^8">= 8</option>
+            <option value="=^9">= 9</option>
+            <option value="x^x">= X</option>
+            <option value="xeven^xeven">= X Even</option>
+            <option value="xodd^xodd">= X Odd</option>
+            <option value="y^y">= Y</option>
+            <option value="not^0">not 0</option>
+            <option value="not^1">not 1</option>
+            <option value="not^2">not 2</option>
+            <option value="not^3">not 3</option>
+            <option value="not^4">not 4</option>
+            <option value="not^5">not 5</option>
+            <option value="not^6">not 6</option>
+            <option value="not^7">not 7</option>
+            <option value="not^8">not 8</option>
+            <option value="not^9">not 9</option>
+            <option value="ov^0">OVER 0</option>
+            <option value="ov^1">OVER 1</option>
+            <option value="ov^2">OVER 2</option>
+            <option value="ov^3">OVER 3</option>
+            <option value="ov^4">OVER 4</option>
+            <option value="ov^5">OVER 5</option>
+            <option value="ov^6">OVER 6</option>
+            <option value="ov^7">OVER 7</option>
+            <option value="ov^8">OVER 8</option>
+            <option value="un^1">UNDER 1</option>
+            <option value="un^2">UNDER 2</option>
+            <option value="un^3">UNDER 3</option>
+            <option value="un^4">UNDER 4</option>
+            <option value="un^5">UNDER 5</option>
+            <option value="un^6">UNDER 6</option>
+            <option value="un^7">UNDER 7</option>
+            <option value="un^8">UNDER 8</option>
+            <option value="un^9">UNDER 9</option>
+            <option value="even^even">EVEN</option>
+            <option value="odd^odd">ODD</option>
+          </select></th>
+          <th height="0" scope="row"><select class="select-css2any" size="1" name="dig^10" id="dig^10" style="width:75px; height:27px; font-size:12px">
+            <option value="any^any">any</option>
+            <option value="=^0">= 0</option>
+            <option value="=^1">= 1</option>
+            <option value="=^2">= 2</option>
+            <option value="=^3">= 3</option>
+            <option value="=^4">= 4</option>
+            <option value="=^5">= 5</option>
+            <option value="=^6">= 6</option>
+            <option value="=^7">= 7</option>
+            <option value="=^8">= 8</option>
+            <option value="=^9">= 9</option>
+            <option value="x^x">= X</option>
+            <option value="xeven^xeven">= X Even</option>
+            <option value="xodd^xodd">= X Odd</option>
+            <option value="y^y">= Y</option>
+            <option value="not^0">not 0</option>
+            <option value="not^1">not 1</option>
+            <option value="not^2">not 2</option>
+            <option value="not^3">not 3</option>
+            <option value="not^4">not 4</option>
+            <option value="not^5">not 5</option>
+            <option value="not^6">not 6</option>
+            <option value="not^7">not 7</option>
+            <option value="not^8">not 8</option>
+            <option value="not^9">not 9</option>
+            <option value="ov^0">OVER 0</option>
+            <option value="ov^1">OVER 1</option>
+            <option value="ov^2">OVER 2</option>
+            <option value="ov^3">OVER 3</option>
+            <option value="ov^4">OVER 4</option>
+            <option value="ov^5">OVER 5</option>
+            <option value="ov^6">OVER 6</option>
+            <option value="ov^7">OVER 7</option>
+            <option value="ov^8">OVER 8</option>
+            <option value="un^1">UNDER 1</option>
+            <option value="un^2">UNDER 2</option>
+            <option value="un^3">UNDER 3</option>
+            <option value="un^4">UNDER 4</option>
+            <option value="un^5">UNDER 5</option>
+            <option value="un^6">UNDER 6</option>
+            <option value="un^7">UNDER 7</option>
+            <option value="un^8">UNDER 8</option>
+            <option value="un^9">UNDER 9</option>
+            <option value="even^even">EVEN</option>
+            <option value="odd^odd">ODD</option>
+          </select></th>
+          <th height="0" scope="row"></th>
+          <th rowspan="2" scope="row"><select class="select-css3" size="1" name="command" id="command">
+            <option value="CALL^CALL">CALL</option>
+            <option value="PUT^PUT">PUT</option>
+            <option value="HIGHER^HIGHER">HIGHER (OFFSET 1)</option>
+            <option value="LOWER^LOWER">LOWER (OFFSET 1)</option>
+            <option value="ONETOUCH^ONETOUCH">TOUCH (OFFSET 1)</option>
+            <option value="NOTOUCH^NOTOUCH">NO TOUCH (OFFSET 1)</option>
+            <option value="EXPIRYRANGE^EXPIRYRANGE">ENDS IN (OFFSET 1&2)</option>
+            <option value="EXPIRYMISS^EXPIRYMISS">ENDS OUT (OFFSET 1&2)</option>
+            <option value="RANGE^RANGE">STAYS IN (OFFSET 1&2)</option>
+            <option value="UPORDOWN^UPORDOWN">GOES OUT (OFFSET 1&2)</option>
+            <option value="RUNHIGH^RUNHIGH">ONLY UP</option>
+            <option value="RUNLOW^RUNLOW">ONLY DOWN</option>
+            <option value="ASIANU^ASIANU">ASIAN UP</option>
+            <option value="ASIAND^ASIAND">ASIAN DOWN</option>
+            <option value="RESETCALL^RESETCALL">RESET CALL</option>
+            <option value="RESETPUT^RESETPUT">RESET PUT</option>
+            <option value="LBFLOATPUT^LBFLOATPUT">HIGH-CLOSE</option>
+            <option value="LBFLOATCALL^LBFLOATCALL">CLOSE-LOW</option>
+            <option value="LBHIGHLOW^LBHIGHLOW">HIGH-LOW</option>
+            <option value="TICKHIGH^1">HIGH TICK#1</option>
+            <option value="TICKHIGH^2">HIGH TICK#2</option>
+            <option value="TICKHIGH^3">HIGH TICK#3</option>
+            <option value="TICKHIGH^4">HIGH TICK#4</option>
+            <option value="TICKHIGH^5">HIGH TICK#5</option>
+            <option value="TICKLOW^1">LOW TICK#1</option>
+            <option value="TICKLOW^2">LOW TICK#2</option>
+            <option value="TICKLOW^3">LOW TICK#3</option>
+            <option value="TICKLOW^4">LOW TICK#4</option>
+            <option value="TICKLOW^5">LOW TICK#5</option>
+            <option value="DIGITDIFF^r">DIFFER RANDOM</option>
+            <option value="DIGITDIFF^o10">DIFFER OUT OF 10</option>
+            <option value="DIGITDIFF^0" selected="selected">DIFFER 0</option>
+            <option value="DIGITDIFF^1">DIFFER 1</option>
+            <option value="DIGITDIFF^2">DIFFER 2</option>
+            <option value="DIGITDIFF^3">DIFFER 3</option>
+            <option value="DIGITDIFF^4">DIFFER 4</option>
+            <option value="DIGITDIFF^5">DIFFER 5</option>
+            <option value="DIGITDIFF^6">DIFFER 6</option>
+            <option value="DIGITDIFF^7">DIFFER 7</option>
+            <option value="DIGITDIFF^8">DIFFER 8</option>
+            <option value="DIGITDIFF^9">DIFFER 9</option>
+            <option value="DIGITDIFF^x">DIFFER X</option>
+            <option value="DIGITDIFF^y">DIFFER Y</option>
+            <option value="DIGITMATCH^r">MATCH RANDOM</option>
+            <option value="DIGITMATCH^o10">MATCH OUT OF 10</option>
+            <option value="DIGITMATCH^0">MATCH 0</option>
+            <option value="DIGITMATCH^1">MATCH 1</option>
+            <option value="DIGITMATCH^2">MATCH 2</option>
+            <option value="DIGITMATCH^3">MATCH 3</option>
+            <option value="DIGITMATCH^4">MATCH 4</option>
+            <option value="DIGITMATCH^5">MATCH 5</option>
+            <option value="DIGITMATCH^6">MATCH 6</option>
+            <option value="DIGITMATCH^7">MATCH 7</option>
+            <option value="DIGITMATCH^8">MATCH 8</option>
+            <option value="DIGITMATCH^9">MATCH 9</option>
+            <option value="DIGITMATCH^x">MATCH X</option>
+            <option value="DIGITMATCH^y">MATCH Y</option>
+            <option value="DIGITOVER^0">OVER 0</option>
+            <option value="DIGITOVER^1">OVER 1</option>
+            <option value="DIGITOVER^2">OVER 2</option>
+            <option value="DIGITOVER^3">OVER 3</option>
+            <option value="DIGITOVER^4">OVER 4</option>
+            <option value="DIGITOVER^5">OVER 5</option>
+            <option value="DIGITOVER^6">OVER 6</option>
+            <option value="DIGITOVER^7">OVER 7</option>
+            <option value="DIGITOVER^8">OVER 8</option>
+            <option value="DIGITOVER^x">OVER X</option>
+            <option value="DIGITOVER^y">OVER Y</option>
+            <option value="DIGITUNDER^1">UNDER 1</option>
+            <option value="DIGITUNDER^2">UNDER 2</option>
+            <option value="DIGITUNDER^3">UNDER 3</option>
+            <option value="DIGITUNDER^4">UNDER 4</option>
+            <option value="DIGITUNDER^5">UNDER 5</option>
+            <option value="DIGITUNDER^6">UNDER 6</option>
+            <option value="DIGITUNDER^7">UNDER 7</option>
+            <option value="DIGITUNDER^8">UNDER 8</option>
+            <option value="DIGITUNDER^9">UNDER 9</option>
+            <option value="DIGITUNDER^x">UNDER X</option>
+            <option value="DIGITUNDER^y">UNDER Y</option>
+            <option value="DIGITEVEN^DIGITEVEN">EVEN</option>
+            <option value="DIGITODD^DIGITODD">ODD</option>
+          </select></th>
+          <th height="0" scope="row"></th>
+        </tr>
+        <tr align="center" valign="middle">
+          <th height="0" align="right" scope="row">Color:</th>
+          <th height="0" scope="row"><select onchange="bl(this.id,this.value)" class="select-css2any" size="1" name="col^1" id="col^1">
+            <option value="any">any</option>
+            <option style="background-color:#29abe2" value="blue">BLUE</option>
+            <option style="background-color:#CC0033" value="red">RED</option>
+            <option value="white">WHITE</option>
+          </select></th>
+          <th height="0" scope="row"><select onchange="bl(this.id,this.value)" class="select-css2any" size="1" name="col^2" id="col^2">
+            <option value="any">any</option>
+            <option style="background-color:#29abe2" value="blue">BLUE</option>
+            <option style="background-color:#CC0033" value="red">RED</option>
+            <option value="white">WHITE</option>
+          </select></th>
+          <th height="0" scope="row"><select onchange="bl(this.id,this.value)" class="select-css2any" size="1" name="col^3" id="col^3">
+            <option value="any">any</option>
+            <option style="background-color:#29abe2" value="blue">BLUE</option>
+            <option style="background-color:#CC0033" value="red">RED</option>
+            <option value="white">WHITE</option>
+          </select></th>
+          <th height="0" scope="row"><select onchange="bl(this.id,this.value)" class="select-css2any" size="1" name="col^4" id="col^4">
+            <option value="any">any</option>
+            <option style="background-color:#29abe2" value="blue">BLUE</option>
+            <option style="background-color:#CC0033" value="red">RED</option>
+            <option value="white">WHITE</option>
+          </select></th>
+          <th height="0" scope="row"><select onchange="bl(this.id,this.value)" class="select-css2any" size="1" name="col^5" id="col^5">
+            <option value="any">any</option>
+            <option style="background-color:#29abe2" value="blue">BLUE</option>
+            <option style="background-color:#CC0033" value="red">RED</option>
+            <option value="white">WHITE</option>
+          </select></th>
+          <th height="0" scope="row"><select onchange="bl(this.id,this.value)" class="select-css2any" size="1" name="col^6" id="col^6">
+            <option value="any">any</option>
+            <option style="background-color:#29abe2" value="blue">BLUE</option>
+            <option style="background-color:#CC0033" value="red">RED</option>
+            <option value="white">WHITE</option>
+          </select></th>
+          <th height="0" scope="row"><select onchange="bl(this.id,this.value)" class="select-css2any" size="1" name="col^7" id="col^7">
+            <option value="any">any</option>
+            <option style="background-color:#29abe2" value="blue">BLUE</option>
+            <option style="background-color:#CC0033" value="red">RED</option>
+            <option value="white">WHITE</option>
+          </select></th>
+          <th height="0" scope="row"><select onchange="bl(this.id,this.value)" class="select-css2any" size="1" name="col^8" id="col^8">
+            <option value="any">any</option>
+            <option style="background-color:#29abe2" value="blue">BLUE</option>
+            <option style="background-color:#CC0033" value="red">RED</option>
+            <option value="white">WHITE</option>
+          </select></th>
+          <th height="0" scope="row"><select onchange="bl(this.id,this.value)" class="select-css2any" size="1" name="col^9" id="col^9">
+            <option value="any">any</option>
+            <option style="background-color:#29abe2" value="blue">BLUE</option>
+            <option style="background-color:#CC0033" value="red">RED</option>
+            <option value="white">WHITE</option>
+          </select></th>
+          <th height="0" scope="row"><select onchange="bl(this.id,this.value)" class="select-css2any" size="1" name="col^10" id="col^10" style="width:75px; height:27px; font-size:12px">
+            <option value="any">any</option>
+            <option style="background-color:#29abe2" value="blue">BLUE</option>
+            <option style="background-color:#CC0033" value="red">RED</option>
+            <option value="white">WHITE</option>
+          </select></th>
+          <th height="0" scope="row"></th>
+          <th height="0" scope="row"></th>
+          </tr>
+        </table>
+        <table align="center" border="0">
+  <tr>
+    <td colspan="2" align="left" valign="bottom"><font color="#FFFF00">Risk Management</font></td>
+    <td width="10">&nbsp;</td>
+    <td width="1" bgcolor="#CCCCCC">&nbsp;</td>
+    <td width="10">&nbsp;</td>
+    <td colspan="2" align="left" valign="bottom"><font color="#FFFF00">Martingale</font></td>
+    <td width="10">&nbsp;</td>
+    <td width="1" bgcolor="#CCCCCC">&nbsp;</td>
+    <td width="10">&nbsp;</td>
+    <td colspan="2" align="left" valign="bottom"><font color="#FFFF00">Delay (seconds)</font></td>
+    <td width="10" align="center" valign="bottom">&nbsp;</td>
+    <td width="1" align="center" valign="bottom" bgcolor="#CCCCCC">&nbsp;</td>
+    <td width="10" align="center" valign="bottom">&nbsp;</td>
+    <td colspan="2" align="left" valign="bottom"><font color="#FFFF00">Barrier</font> <div class="tooltip"><img src="image/tooltips.png" width="20" height="20" alt="?" />
+  <span class="tooltiptext">For Higher / Lower. USE +/-</span>
+</div></td>
+    <td width="10" align="center" valign="bottom">&nbsp;</td>
+    <td width="1" align="center" valign="bottom" bgcolor="#CCCCCC">&nbsp;</td>
+    <td width="10" align="center" valign="bottom">&nbsp;</td>
+    <td rowspan="3" align="center" valign="middle"><a id="aStart" class="btnStart" href="#" onclick="if(document.getElementById('lblBalance').innerHTML=='-'){alert('Check Your Main Token');}else if(!document.getElementById('nov').checked && document.getElementById('txtVToken').value==''){alert('Check Your Virtual Token.');}else{ this.style.display='none'; document.getElementById('aStop').style.display='inline-block';_0x5b2b14('#FFFFFF','AUTO TRADE START');initStake=document.getElementById('txtStake').value;tempMartiLevel=0;onPurchasing=false;tempVLoss=0;topProf=parseFloat(document.getElementById('lblProfit').innerHTML);bupis0();bm();}">START</a><a id="aWait" class="btnWait" href="#">WAIT</a><a id="aStop" class="btnStop" href="#" onclick="this.style.display='none'; document.getElementById('aStart').style.display='inline-block';_0x5b2b14('#FFFFFF','AUTO TRADE STOP');if(!document.getElementById('checkSmartStake').checked){document.getElementById('txtStake').value=initStake;}">STOP</a></td>
+    </tr>
+  <tr>
+    <td align="right" valign="middle">Target:</td>
+    <td align="left" valign="middle"><input name="txtTP" min="0" style="text-align:center; width:50px; border-radius:15px" id="txtTP" value="1" /></td>
+    <td width="10" align="left" valign="middle">&nbsp;</td>
+    <td width="1" align="left" valign="middle" bgcolor="#CCCCCC">&nbsp;</td>
+    <td width="10" align="left" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle">Multiplier:</td>
+    <td align="left" valign="middle"><input name="txtMultiplier" min="1" style="text-align:center; width:50px; border-radius:15px" id="txtMultiplier" value="15" /></td>
+    <td width="10" align="left" valign="middle">&nbsp;</td>
+    <td width="1" align="left" valign="middle" bgcolor="#CCCCCC">&nbsp;</td>
+    <td width="10" align="left" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle">Aft. Win:</td>
+    <td align="left" valign="middle"><input name="txtDelayWin" type="number" min="0" style="text-align:center; width:50px; border-radius:15px" id="txtDelayWin" value="0" /></td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle" bgcolor="#CCCCCC">&nbsp;</td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle">Off. 1:</td>
+    <td width="10" align="right" valign="middle"><input name="txtOffset1" style="text-align:center; width:50px; border-radius:15px" id="txtOffset1" value="+0.1" /></td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td width="1" align="right" valign="middle" bgcolor="#CCCCCC">&nbsp;</td>
+    <td align="right" valign="middle">&nbsp;</td>
+    </tr>
+  <tr>
+    <td align="right" valign="middle">Stop Loss:</td>
+    <td align="left" valign="middle"><input name="txtSL" min="0" style="text-align:center; width:50px; border-radius:15px" id="txtSL" value="1" /></td>
+    <td width="10" align="left" valign="middle">&nbsp;</td>
+    <td width="1" align="left" valign="middle" bgcolor="#CCCCCC">&nbsp;</td>
+    <td width="10" align="left" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle">Max Level:</td>
+    <td align="left" valign="middle"><input name="txtMartiLevel" type="number" min="1" style="text-align:center; width:50px; border-radius:15px" id="txtMartiLevel" value="3" /></td>
+    <td width="10" align="left" valign="middle">&nbsp;</td>
+    <td width="1" align="left" valign="middle" bgcolor="#CCCCCC">&nbsp;</td>
+    <td width="10" align="left" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle">Aft. Lose:</td>
+    <td align="left" valign="middle"><input name="txtDelayLose" type="number" min="0" style="text-align:center; width:50px; border-radius:15px" id="txtDelayLose" value="0" /></td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle" bgcolor="#CCCCCC">&nbsp;</td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle">Off. 2:</td>
+    <td align="right" valign="middle"><input name="txtOffset2" style="text-align:center; width:50px; border-radius:15px" id="txtOffset2" value="-0.1" /></td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td width="1" align="right" valign="middle" bgcolor="#CCCCCC">&nbsp;</td>
+    <td align="right" valign="middle">&nbsp;</td>
+    </tr>
+  <tr>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="left" valign="middle">&nbsp;</td>
+    <td align="left" valign="middle">&nbsp;</td>
+    <td align="left" valign="middle" bgcolor="#CCCCCC">&nbsp;</td>
+    <td align="left" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle"><label for="checkSmartMarti">Smart Marti:</label></td>
+    <td align="left" valign="middle"><input type="checkbox" id="checkSmartMarti" style="transform:scale(1.5)" checked="checked"/> <div class="tooltip"><img src="image/tooltips.png" width="20" height="20" alt="?" />
+  <span class="tooltiptext">If active: back to initial stake ONLY after loss covered.</span>
+</div></td>
+    <td align="left" valign="middle">&nbsp;</td>
+    <td align="left" valign="middle" bgcolor="#CCCCCC">&nbsp;</td>
+    <td align="left" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="left" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle" bgcolor="#CCCCCC">&nbsp;</td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle" bgcolor="#CCCCCC">&nbsp;</td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="center" valign="middle">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="18" align="left" valign="bottom"><font color="#FFFF00">Using Loss / Win Virtual Before Open On Main Account </font><font color="#00FFFF"><em>(NEW FEATURE)</em></font></td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="center" valign="middle">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="21" align="left" valign="middle">Virtual Token:
+      <input type="password" name="txtVToken" id="txtVToken" style="text-align:center; width:50px; border-radius:15px" />&nbsp;&nbsp;<input type="button" name="btnVCheck" id="btnVCheck" value="Connect" onclick="if(document.getElementById('txtVToken').value==''){alert('Please input token.');}else{if(checkDupli()){alert('Main Token must be different with Virtual Token');}else{checkVToken();}}" style="width:90px; height:25px; border-radius:8px"/><label id="lblVAcc"></label> | 
+      <input style="transform:scale(1.5)" id="checkResAftMLoss" type="checkbox"/>
+      <label for="checkResAftMLoss"> Reset After Main Loss</label> | <input type="button" name="btnVReset" id="btnVReset" value="Reset Count Manually" onclick="tempVLoss=0,wlJmlWinV=0,wlJmlAllV=0,wlOrderV='',cetakWLV();" style="height:25px; border-radius:8px"/> 
+      | Virtual Stake:<input id="txtVStake" style="text-align:center; width:50px; border-radius:15px" value="1" min="0.35"/></td>
+    </tr>
+  <tr>
+    <td colspan="6" align="left" valign="middle"><input type="radio" id="nov" name="wlvirtual" value="nov" checked="checked"><label for="nov">Not Using</label></td>
+    <td colspan="15" align="left" valign="middle"><input type="radio" id="allv" name="wlvirtual" value="allv"/><label for="allv">All Virtual (Loss + Win)</label>&nbsp;<span id="spallv" style="display:inline">:<input name="txtVAll" type="number" min="1" style="text-align:center; width:50px; border-radius:15px" id="txtVAll" value="1"/>&nbsp;[<label id="lblVAll">0</label>]</span></td>
+    </tr>
+  <tr>
+    <td colspan="6" align="left" valign="middle"><input type="radio" id="lossv" name="wlvirtual" value="lossv"/><label for="lossv">Loss Virtual</label>&nbsp;<span id="splossv" style="display:inline">:<input name="txtVLoss" type="number" min="1" style="text-align:center; width:50px; border-radius:15px" id="txtVLoss" value="1"/>&nbsp;[<label id="lblVLoss">0</label>]</span></td>
+    <td colspan="15" align="left" valign="middle"><input type="radio" id="losswinv" name="wlvirtual" value="losswinv"/><label for="losswinv">Loss &amp; Win Virtual</label>&nbsp;<span id="splosswinv" style="display:inline">:Min Loss<input name="txtVLoss2" type="number" min="1" style="text-align:center; width:50px; border-radius:15px" id="txtVLoss2" value="1"/>
+      &amp; Min Win
+      <input name="txtVWin2" type="number" min="1" style="text-align:center; width:50px; border-radius:15px" id="txtVWin2" value="1"/>&nbsp;[<label id="lblVLoss2">0</label> & <label id="lblVWin2">0</label>]</span></td>
+    </tr>
+  <tr>
+    <td colspan="6" align="left" valign="top"><input type="radio" id="winv" name="wlvirtual" value="winv"/><label for="winv">Win Virtual</label>&nbsp;<span id="spwinv" style="display:inline">:<input name="txtVWin" type="number" min="1" style="text-align:center; width:50px; border-radius:15px" id="txtVWin" value="1"/>&nbsp;[<label id="lblVWin">0</label>]</span></td>
+    <td colspan="15" align="left" valign="middle"><input type="radio" id="orderv" name="wlvirtual" value="orderv"/><label for="orderv">By Order (W:Win, L:Loss)</label>&nbsp;<span id="sporderv" style="display:inline">:<input name="txtVOrder" type="text" placeholder="Ex: WWLWW" style="text-align:center; width:150px; border-radius:15px" id="txtVOrder"/>&nbsp;[<label id="lblVOrder"></label>]</span></td>
+    </tr>
+  <tr>
+    <td colspan="8" align="left" valign="middle"></td>
+    <td align="left" valign="middle">&nbsp;</td>
+    <td align="left" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="left" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="right" valign="middle">&nbsp;</td>
+    <td align="center" valign="middle">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="21" align="left" valign="middle"></td>
+    </tr>
+        </table>
+
+        </th>
+      <th width="300px" rowspan="2" align="center" valign="top" style="border:ridge; border-radius:15px; max-width:300px; min-width:300px" scope="col">
+      <table width="100%">
+          <tr style="display:none">
+            <td colspan="2">Server Status:&nbsp;<input id="conStatus" type="button" disabled="disabled" style="border:1px solid white; background-color:red; border-radius:50%; width:20px; height:20px" value=""/></td>
+            </tr>
+          <tr><td>
+            <font color="#FFFFFF"><strong>Main Token: </strong></font>
+            </td><td>
+              <input type="password" name="txtToken" id="txtToken" style="text-align:center; width:96%; border-radius:15px" /></td></tr>
+          <tr><td colspan="2">
+            <input type="button" name="btnConnect" id="btnConnect" value="Connect" style="width:100%; height:30px; border-radius:10px" onclick="if(document.getElementById('txtToken').value==''){alert('Please input token.');}else{if(checkDupli()){alert('Main Token must be different with Virtual Token');}else{bk();}}"/>
+            </td></tr>
+          </table>
+        <font color="#FFFFFF"><strong><em><label id="lblAcc">Balance</label> :</em>
+          $ <label id="lblBalance">-</label>&nbsp;&nbsp;|&nbsp;&nbsp;<em>Profit:</em>
+          $ <label id="lblProfit">0</label></strong></font><br /><table width="100%">
+          <tr>
+            <td align="center">
+            <label for="checkSmartStake">Smart Stake:</label><input style="transform:scale(1.5)" name="checkSmartStake" id="checkSmartStake" type="checkbox" onchange="if(this.checked){document.getElementById('txtStake').readOnly=true;document.getElementById('txtStake').style.backgroundColor='yellow';document.getElementById('txtSL').readOnly=true;document.getElementById('txtSL').style.backgroundColor='yellow';}else{document.getElementById('txtStake').readOnly=false;document.getElementById('txtStake').style.backgroundColor='';document.getElementById('txtSL').readOnly=false;document.getElementById('txtSL').style.backgroundColor='';}"/>&nbsp;&nbsp;|&nbsp;&nbsp;<font color="#FFFFFF"><strong>Stake:</strong></font><input name="txtStake" id="txtStake" style="text-align:center; width:70px; border-radius:15px" value="1" min="0.35"/>
+              </td></tr>
+          <tr><td align="center">
+            <font color="#FFFFFF"><strong>Duration: </strong></font>
+            
+            <input type="number" min="1" value="5" name="selDur" id="selDur" style="text-align:center; width:43px; border-radius:15px" /><select style="width:75px;; border-radius:8px;" class="dropdown-select" name="selDurUni" size="1" id="selDurUni" onchange="if(this.value=='xt' || this.value=='rt'){document.getElementById('selDur').style.display='none'}else{document.getElementById('selDur').style.display='block'}">
+              <option value="t" selected="selected">ticks</option>
+              <option value="xt">X ticks</option>
+              <option value="rt">random ticks</option>
+              <option value="s">seconds</option>
+              <option value="m">minutes</option>
+              <option value="h">hours</option>
+              <option value="d">days</option>
+            </select>
+              </td></tr>
+          </table><br />
+        <div id="log" style="text-align:left; width:100%; height:370px; border:thin; background-color:transparent;overflow-y:scroll; border-radius:10px"></div>
+      </th>
+    </tr>
+  </table>
+</td></tr></table>
+
+<div align="center">
+<iframe frameborder="0" align="top" width="100%" height="90px" src="https://www.ezbinarybot.com/EZTools_set.html" title="More Tools"></iframe>
+</div>
+
+<table width="80%" align="center"><tr>
+  <td align="center" style="text-shadow:0 0 2px #000,0 0 2px #000,0 0 2px #000">
+Risk Disclaimer : The products offered on the Binary.com website include binary options, contracts for difference ("CFDs") and other complex derivatives. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on the website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex products offered, please be sure to understand the risks involved.
+</td></tr></table>
+
+<form style="display: none;">
+  <input type="hidden" id="data_001" name="data_001">
+  <input type="hidden" id="data_002" name="data_002">
+  <input type="hidden" id="data_003" name="data_003">
+  <input type="hidden" id="data_004" name="data_004">
+  <input type="hidden" id="data_005" name="data_005">
+  <input type="hidden" id="data_006" name="data_006">
+  <input type="hidden" id="data_007" name="data_007">
+  <input type="hidden" id="data_008" name="data_008">
+  <input type="submit" id="aSimp" name="aSimp">-</button>
+</form>
+
+<script type="text/javascript">
+document.getElementById("aStart").style.display='inline-block';
+document.getElementById("aWait").style.display='none';
+document.getElementById("aStop").style.display='none';
+
+	function checkVToken() {
+		if(document.getElementById("txtVToken").value.length<=0){
+			alert("Please input your virtual token");
+		}else{
+			document.getElementById("btnVCheck").value="Wait...";
+			document.getElementById("btnVCheck").disabled=true;
+			var ws = new WebSocket("wss://ws.derivws.com/websockets/v3?app_id=19211");
+			ws.onopen = function(evt) {
+				ws.send(JSON.stringify({authorize:document.getElementById("txtVToken").value}));
+			};
+			ws.onmessage = function(msg) {
+				var data = JSON.parse(msg.data);
+				if(data.hasOwnProperty('error')) {
+					alert("Authorize error : " + data.error.message);
+					document.getElementById("btnVCheck").value="Connect";
+			document.getElementById("btnVCheck").disabled=false;
+				} else {
+					if(data.authorize.scopes.indexOf("read")<0 || data.authorize.scopes.indexOf("trade")<0){
+						alert("EZ BinBot need 'read' & 'trade' scopes. Please check your virtual token setting on binary.com");
+						document.getElementById("btnVCheck").value="Connect";
+			document.getElementById("btnVCheck").disabled=false;
+					}else {
+						document.getElementById("btnVCheck").hidden=true;
+						document.getElementById("lblVAcc").innerHTML=data.authorize.loginid.substring(0,2)+"*******"+data.authorize.loginid.substring(data.authorize.loginid.length-2,data.authorize.loginid.length);
+						ws.close();
+						tempVLoss=0;
+						bk8();
+					}
+				}
+			};
+		}
+	}
+	
+	function checkDupli(){
+		if(document.getElementById("txtToken").value===document.getElementById("txtVToken").value){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+</script>
+<script type="text/javascript" src="js/ezworm_202404152154.js"></script>
+</body>
+</html>
