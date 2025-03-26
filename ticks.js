@@ -7,7 +7,8 @@ const api = new DerivAPIBasic({ connection });
 const ticks_history_request = {
   ticks_history: 'R_50',
   adjust_start_time: 1,
-  count: 1000,
+  count: 10,
+  granularity: 60,
   end: 'latest',
   start: 1,
   style: 'candles',
@@ -47,13 +48,36 @@ const ticksResponse = async (res) => {
     const tick = data.tick;
     console.log('Received tick data:', tick); // Adicionei este console.log
     const html = `
-      <p>Ask: ${tick.ask}</p>
-      <p>Bid: ${tick.bid}</p>
+      <p>Symbol: ${tick.symbol}</p>
+      <p>Quote: ${tick.quote}</p>
       <p>Epoch: ${tick.epoch}</p>
       <p>ID: ${tick.id}</p>
-      <p>Pip Size: ${tick.pip_size}</p>
-      <p>Quote: ${tick.quote}</p>
-      <p>Symbol: ${tick.symbol}</p>
+      <p>Pip Size: ${tick.pip_size}</p>     
+      
+    `;
+    console.log('Generated HTML:', html); // Adicionei2 este console.log
+    dadosElement.innerHTML = html;
+  }
+  else if (data.msg_type === 'candles') {
+    const Candles = data.candles;
+    console.log('Received candle data:', Candles); // Adicionei este console.log
+   
+  }
+  else if (data.msg_type === 'ohlc') {
+    const oCandles = data.ohlc;
+    console.log('Received candle data:', oCandles); // Adicionei este console.log
+    const html = `
+      <p>Symbol: ${oCandles.symbol}</p>
+      <p>Granularity: ${oCandles.granularity}</p>
+      <p>Open: ${oCandles.open}</p>
+      <p>High: ${oCandles.high}</p>
+      <p>Low: ${oCandles.low}</p>
+      <p>Close: ${oCandles.close}</p>
+      <p>ID: ${oCandles.id}</p>
+      <p>Pip Size: ${oCandles.pip_size}</p>
+      <p>Open Time: ${oCandles.open_time}</p>     
+      <p>Epoch: ${oCandles.epoch}</p>
+      
     `;
     console.log('Generated HTML:', html); // Adicionei2 este console.log
     dadosElement.innerHTML = html;
