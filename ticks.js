@@ -7,7 +7,7 @@ const api = new DerivAPIBasic({ connection });
 const ticks_history_request = {
   ticks_history: 'R_50',
   adjust_start_time: 1,
-  count: 10,
+  count: 1000,
   end: 'latest',
   start: 1,
   style: 'candles',
