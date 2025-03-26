@@ -10,7 +10,7 @@ const ticks_history_request = {
   count: 10,
   end: 'latest',
   start: 1,
-  style: 'candles',
+  style: 'ticks',
 };
 
 const ticks_request = {
